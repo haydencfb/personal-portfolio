@@ -5,7 +5,7 @@ function Home() {
 
     const h1Style = {
         color: 'blue',
-        fontSize: '50px'
+        fontSize: '50px',
     }
 
     return (
