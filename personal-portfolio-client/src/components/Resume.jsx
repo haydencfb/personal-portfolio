@@ -1,8 +1,8 @@
-import classes from '../styles/Resume.module.css';
+import classes from "../styles/main.module.css";
 
 function Resume() {
     return (
-        <div>
+        <div className={`${classes.div}`}>
             <h1>Resume</h1>
         </div>
     )
