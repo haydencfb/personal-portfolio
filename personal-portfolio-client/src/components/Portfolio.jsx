@@ -1,8 +1,8 @@
-import classes from '../styles/Portfolio.module.css';
+import classes from "../styles/main.module.css";
 
 function Portfolio() {
     return (
-        <div className={`${classes.portfolioDiv}`}>
+        <div className={`${classes.div}`}>
             <h1>Portfolio</h1>
         </div>
     )

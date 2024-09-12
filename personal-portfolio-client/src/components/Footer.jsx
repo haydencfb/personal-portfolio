@@ -1,4 +1,4 @@
-import classes from '../styles/Footer.module.css';
+import classes from "../styles/main.module.css";
 
 function Footer() {
     return (
