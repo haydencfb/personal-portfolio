@@ -1,0 +1,23 @@
+.aboutH1 {
+    color: var(--primary-green);
+}
+
+.aboutImg {
+    width: 100px;
+    height: 100px;
+}
+
+.nameH2 {
+    margin: 0px;
+}
+
+.webDevH1 {
+    color: var(--primary-green);
+    font-size: 100px;
+    margin: 0px;
+}
+
+.paragraph {
+    color: var(--primary-green);
+    font-size: 20px;
+}

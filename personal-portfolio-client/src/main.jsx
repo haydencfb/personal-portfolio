@@ -7,7 +7,7 @@ import Resume from './components/Resume.jsx'
 import Error from './components/Error.jsx'
 
 import App from './App.jsx'
-// import classes from './styles/main.module.css'
+import classes from './styles/main.module.css'
 
 const router = createBrowserRouter([
   {
