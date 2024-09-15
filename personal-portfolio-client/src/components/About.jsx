@@ -1,76 +1,219 @@
 // CSS Imports
-import classes from "../styles/main.module.css";
+import classes from "../styles/about.module.css";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 // Image Imports
-import profileLogo from "../assets/uzime.jpg";
+import htmlLogo from "../assets/htmlLogo2.png";
+import cssLogo from "../assets/cssLogo.png";
+import jsLogo from "../assets/jsLogo.webp";
+import tsLogo from "../assets/tsLogo.png";
+import reactLogo from "../assets/reactLogo.webp";
+import nodejsLogo from "../assets/nodejsLogo.png";
+import gitLogo from "../assets/gitLogo.png";
+import muiLogo from "../assets/muiLogo.png";
+
 
 // React Hook Imports
-import { Link } from "react-router-dom";
-import { useState } from "react";
-
-// MUI Imports
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MenuIcon from '@mui/icons-material/Menu';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+// MUI Logo Imports
+
+// MUI Grid Imports
 import Grid from '@mui/material/Grid2';
+
 function About() {
   return (
 
-    <Grid 
-    container 
-    direction="row"
-    spacing={2}
-    sx={{
-      justifyContent: "space-evenly",
-      alignItems: "center",
-    }}
+    <ThemeProvider
+      theme={createTheme({
+        breakpoints: {
+          values: {
+            desktop: 1280,
+            laptop: 1024,
+            tablet: 640,
+            mobile: 0,
+          },
+        },
+      })}
     >
 
-    <Grid item size={{ xs: 12}}>
-      <h2 className={`${classes.headerH1}`}>Hayden Fitzatrick-Brintle</h2>
-    </Grid>
+      <Grid 
+      container 
+      direction="row"
+      spacing={2}
+        sx={{
+          justifyContent: "center",
+        }}
+      >
 
-    <Grid item size={{ xs: 12}}>
-      <h1 className={`${classes.headerH1}`}>Web+ Developer, Photographer/Videographer</h1>
-    </Grid>
+        <Grid item 
+          size={{ 
+            mobile: 12, 
+            tablet: 12, 
+            laptop: 12 
+          }}
+          sx={{
+            textAlign: "flex-start",
+          }}
+        >
+          <h2 className={`${classes.nameH2}`}>Hayden Fitzpatrick-Brintle</h2>
+          <h1 className={`${classes.webDevH1}`}>Web +</h1>
+          <h1 className={`${classes.webDevH1}`}>Developer</h1>
+        </Grid>
+      </Grid>
 
-    <Grid item size={{ xs: 12}}>
-      <img src={profileLogo} alt="Profile Logo" className={`${classes.headerImg}`}/>
-    </Grid>
+      <Grid 
+      container 
+      direction="row"
+      spacing={2}
+        sx={{
+          justifyContent: "center",
+        }}
+      >
+        <Grid item
+            size={{
+              mobile: 12,
+              table: 12,
+              laptop: 12
+            }}
+            sx={{
+              textAlign: "center",
+            }}
+          >
+            <h1 className={`${classes.aboutH1}`}>About</h1>
+          </Grid>
+          <p className={`${classes.paragraph}`}>
+            With a background that is full of communication and seeking improvement,
+            paired with my engaging personality, I am proficient in collaborative
+            environments. As someone who has working in fast-paced environments, I
+            am able to work efficientely with my time. This being said, a timely
+            manner does not lack organization and quality of work, as I am someone
+            who takes pride in any project that I complete.
+          </p>
 
-    <div className={`${classes.div}`}>
-      <h1 className={`${classes.aboutH1}`}>About</h1>
-      <p className={`${classes.aboutP}`}>
-        With a background that is full of communication and seeking improvement,
-        paired with my engaging personality, I am proficient in collaborative
-        environments. As someone who has working in fast-paced environments, I
-        am able to work efficientely with my time. This being said, a timely
-        manner does not lack organization and quality of work, as I am someone
-        who takes pride in any project that I complete.
-      </p>
-      <h1 className={`${classes.aboutH1}`}>Skills</h1>
-      <p className={`${classes.aboutP}`}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-        aliquam odio reprehenderit? Repellat voluptate sunt praesentium
-        consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
-        ratione quo id accusamus rerum.
-      </p>
-      <h1 className={`${classes.aboutH1}`}>Background</h1>
-      <p className={`${classes.aboutP}`}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
-        enim architecto minima quisquam, quibusdam doloremque omnis incidunt
-        alias velit rerum, quae minus, magni quia nihil quos? Neque voluptatum
-        reiciendis eligendi?
-      </p>
-    </div>
+          <Grid item
+            size={{
+              mobile: 12,
+              table: 12,
+              laptop: 12
+            }}
+            sx={{
+              textAlign: "center",
+            }}
+          >
+            <h1 className={`${classes.aboutH1}`}>Skills</h1>
+          </Grid>
+          <p className={`${classes.paragraph}`}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            aliquam odio reprehenderit? Repellat voluptate sunt praesentium
+            consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
+            ratione quo id accusamus rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiisaliquam odio reprehenderit? Repellat voluptate sunt praesentium
+            consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
+            ratione quo id accusamus rerum. 
+          </p>
 
-    </Grid>
+          <Grid item
+            size={{ 
+              mobile: 1, 
+              tablet: 1, 
+              laptop: 1 
+            }}
+          >
+            <img src={htmlLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+          </Grid>
+
+          <Grid item
+            size={{ 
+              mobile: 1, 
+              tablet: 1, 
+              laptop: 1 
+            }}
+          >
+            <img src={cssLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+          </Grid>
+
+          <Grid item
+            size={{ 
+              mobile: 1, 
+              tablet: 1, 
+              laptop: 1 
+            }}
+          >
+            <img src={jsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+          </Grid>
+
+          <Grid item
+            size={{ 
+              mobile: 1, 
+              tablet: 1, 
+              laptop: 1 
+            }}
+          >
+            <img src={tsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+          </Grid>
+
+          <Grid item
+            size={{ 
+              mobile: 1, 
+              tablet: 1, 
+              laptop: 1 
+            }}
+          >
+            <img src={reactLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+          </Grid>
+
+          <Grid item
+            size={{ 
+              mobile: 1, 
+              tablet: 1, 
+              laptop: 1 
+            }}
+          >
+            <img src={nodejsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+          </Grid>
+
+          <Grid item>
+            <img src={gitLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+          </Grid>
+
+          <Grid item
+            size={{ 
+              mobile: 1, 
+              tablet: 1, 
+              laptop: 1 
+            }}
+          >
+            <img src={muiLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+          </Grid>
+
+          <Grid item
+            size={{
+              mobile: 12,
+              table: 12,
+              laptop: 12
+            }}
+            sx={{
+              textAlign: "center",
+            }}
+          >
+            <h1 className={`${classes.aboutH1}`}>Background</h1>
+          </Grid>
+          <p className={`${classes.paragraph}`}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
+            enim architecto minima quisquam, quibusdam doloremque omnis incidunt
+            alias velit rerum, quae minus, magni quia nihil quos? Neque voluptatum
+            reiciendis eligendi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            aliquam odio reprehenderit? Repellat voluptate sunt praesentium
+            consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
+            ratione quo id accusamus rerum. 
+          </p>
+
+      </Grid>
+    </ThemeProvider>
   );
 }
 
