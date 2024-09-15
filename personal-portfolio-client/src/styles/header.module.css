@@ -1,0 +1,42 @@
+/* Root CSS */
+
+:root {
+    /* Color Variables */
+    --primary-green: #82896E;
+    --secondary-green: #264025;
+    --primary-brown: #977347;
+    --secondary-brown: #4C3A1A;
+    --primary-grey: #DDCBB7;
+    --secondary-grey: #9E9F98;
+}
+
+/* Header.jsx CSS */
+
+.headerH1 {
+    color: var(--primary-green);
+}
+
+.headerNav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.headerUl {
+    list-style-type: none;
+}
+
+.headerLink {
+    color: var(--secondary-green);
+    text-decoration: none;
+}
+
+.headerLink:hover {
+    color: var(--primary-brown);
+    text-decoration: none;
+}
+
+.headerImg {
+    width: 200px;
+    height: 200px;
+}

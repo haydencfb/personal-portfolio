@@ -1,7 +1,49 @@
+// CSS Imports
 import classes from "../styles/main.module.css";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
+// Image Imports
+import profileLogo from "../assets/uzime.jpg";
+
+// React Hook Imports
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
+// MUI Imports
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/Menu';
+import Grid from '@mui/material/Grid2';
 function About() {
   return (
+
+    <Grid 
+    container 
+    direction="row"
+    spacing={2}
+    sx={{
+      justifyContent: "space-evenly",
+      alignItems: "center",
+    }}
+    >
+
+    <Grid item size={{ xs: 12}}>
+      <h2 className={`${classes.headerH1}`}>Hayden Fitzatrick-Brintle</h2>
+    </Grid>
+
+    <Grid item size={{ xs: 12}}>
+      <h1 className={`${classes.headerH1}`}>Web+ Developer, Photographer/Videographer</h1>
+    </Grid>
+
+    <Grid item size={{ xs: 12}}>
+      <img src={profileLogo} alt="Profile Logo" className={`${classes.headerImg}`}/>
+    </Grid>
+
     <div className={`${classes.div}`}>
       <h1 className={`${classes.aboutH1}`}>About</h1>
       <p className={`${classes.aboutP}`}>
@@ -27,6 +69,8 @@ function About() {
         reiciendis eligendi?
       </p>
     </div>
+
+    </Grid>
   );
 }
 
