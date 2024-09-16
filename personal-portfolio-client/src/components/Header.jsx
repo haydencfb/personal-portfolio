@@ -22,6 +22,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 // MUI Grid Imports
 import Grid from '@mui/material/Grid2';
@@ -41,15 +42,15 @@ export default function Header(props) {
   const theme=createTheme({
     breakpoints: { 
       values: { 
-        mobile: 650,
-        tablet: 768,
-        laptop: 1024
+        mobile: 0,
+        tablet: 426,
+        laptop: 768
         },
     },
   });
 
-  const isMobile = useMediaQuery(`(max-width: 650px)`)
-  const isLaptop = useMediaQuery(`(min-width: 1024px)`)
+  const isMobile = useMediaQuery(`(max-width: 426px)`)
+  const isLaptop = useMediaQuery(`(min-width: 769px)`)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -68,9 +69,9 @@ export default function Header(props) {
         theme={createTheme({
           breakpoints: {
             values: {
-              mobile: 650,
-              tablet: 760,
-              laptop: 1024
+              mobile: 0,
+              tablet: 426,
+              laptop: 768
             }
           }
       })}>
@@ -184,11 +185,11 @@ export default function Header(props) {
 
           // In this case, the viewport is anything above laptop (1024px)
           ) : isLaptop === true ? (
-
             <>
               <Grid item  
                 size={{ 
-                  tablet: 6, 
+                  tablet: 4, 
+                  // tablet: 6,
                   laptop: 4 
                 }}
                 sx={{
@@ -201,7 +202,8 @@ export default function Header(props) {
                 
               <Grid item
                 size={{
-                  tablet: 6, 
+                  tablet: 8, 
+                  // tablet: 6,
                   laptop: 8 
                 }}
                 sx={{
@@ -222,7 +224,7 @@ export default function Header(props) {
                     Resume
                   </Link>
 
-                  <Link
+                  <IconButton
                     sx={{
                       color: `var(--secondary-green)`,
                       padding: `25px`
@@ -233,8 +235,8 @@ export default function Header(props) {
                     onClick={handleClick}
                     className={`${classes.headerLink}`}
                   >
-                    Socials
-                  </Link>
+                    <ConnectWithoutContactIcon fontSize="large"/>
+                  </IconButton>
 
                 <Menu
                   id="basic-menu"
@@ -272,46 +274,17 @@ export default function Header(props) {
               </Grid>
             </>
 
+          // In this case, the viewport is anything between mobile and laptop (650 - 1024px)
           ) : (
 
-            <>
-              <Grid item  
+            <>                
+              <Grid item 
                 size={{ 
-                  tablet: 6, 
-                  laptop: 4 
-                }}
-                sx={{
-                  textAlign: "start",
-                  paddingLeft: "25px"
+                  mobile: 3,
                 }}
               >
-                <h2 className={`${classes.headerH2}`}>Hayden Fitzpatrick-Brintle</h2>
-              </Grid>
-                
-              <Grid item
-                size={{
-                  tablet: 6, 
-                  laptop: 8 
-                }}
-                sx={{
-                  textAlign: "end",
-                  paddingRight: "25px",
-                }}
-              >
-                  <Link to="/" className={`${classes.headerLink}`}>
-                    About
-                  </Link>
-                  <Link to="/Portfolio" className={`${classes.headerLink}`}>
-                    Portfolio
-                  </Link>
-                  <Link to="/Contact" className={`${classes.headerLink}`}>
-                    Contact
-                  </Link>
-                  <Link to="/Resume" className={`${classes.headerLink}`}>
-                    Resume
-                  </Link>
-
-                  <Link
+                <Tooltip title="Open Menu">
+                  <IconButton
                     sx={{
                       color: `var(--secondary-green)`,
                       padding: `25px`
@@ -320,10 +293,10 @@ export default function Header(props) {
                     aria-haspopup="true"
                     aria-expanded={open ? 'true' : undefined}
                     onClick={handleClick}
-                    className={`${classes.headerLink}`}
                   >
-                    Socials
-                  </Link>
+                    <MenuIcon fontSize="large"/>
+                  </IconButton>
+                </Tooltip>
 
                 <Menu
                   id="basic-menu"
@@ -334,6 +307,39 @@ export default function Header(props) {
                     'aria-labelledby': 'basic-button',
                   }}
                 >
+
+                  <MenuItem sx={{justifyContent: "center"}}>
+                    HFB+
+                  </MenuItem>
+
+                  <Divider />
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="/" className={`${classes.headerLink}`}>
+                      About
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="/Portfolio" className={`${classes.headerLink}`}>
+                      Portfolio
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="/Contact" className={`${classes.headerLink}`}>
+                      Contact
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="/Resume" className={`${classes.headerLink}`}>
+                      Resume
+                    </Link>
+                  </MenuItem>
+
+                  <Divider />
+
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
                     <Link to="https://github.com/haydencfb" className={`${classes.headerLink}`}>
                       <GitHubIcon fontSize="large" />
@@ -357,7 +363,21 @@ export default function Header(props) {
                       <InstagramIcon fontSize="large" />
                     </Link>
                   </MenuItem>
+
                 </Menu>
+              </Grid>
+
+              <Grid item  
+                size={{ 
+                  tablet: 9, 
+                  laptop: 4 
+                }}
+                sx={{
+                  textAlign: "end",
+                  paddingRight: "25px"
+                }}
+              >
+                <h2 className={`${classes.headerH1}`}>Hayden Fitzpatrick-Brintle</h2>
               </Grid>
             </>
 
