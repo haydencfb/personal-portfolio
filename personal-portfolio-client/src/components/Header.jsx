@@ -41,15 +41,15 @@ export default function Header(props) {
   const theme=createTheme({
     breakpoints: { 
       values: { 
-        desktop: 1280,
-        laptop: 1024,
-        tablet: 640,
-        mobile: 0,
+        mobile: 650,
+        tablet: 768,
+        laptop: 1024
         },
     },
   });
 
-  const isMobile = useMediaQuery(`(min-width: 650px)`)
+  const isMobile = useMediaQuery(`(max-width: 650px)`)
+  const isLaptop = useMediaQuery(`(min-width: 1024px)`)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -60,25 +60,26 @@ export default function Header(props) {
     setAnchorEl(null);
   };
 
-  return (   
-  <>
-    <ThemeProvider
-      theme={createTheme({
-        breakpoints: {
-          values: {
-            laptop: 1024,
-            tablet: 640,
-            mobile: 0,
-            desktop: 1280,
-          },
-        },
-    })}>
-      <AppBar 
-      position="fixed"
-      sx={{
-        backgroundColor: `var(--secondary-grey)`,
-        height: `75px`
-      }}>
+  return (  
+    
+    // ThemeProvider, AppBar, and the Grid Container will always render, regardless of the viewport size
+    <>
+      <ThemeProvider
+        theme={createTheme({
+          breakpoints: {
+            values: {
+              mobile: 650,
+              tablet: 760,
+              laptop: 1024
+            }
+          }
+      })}>
+        <AppBar 
+        position="fixed"
+        sx={{
+          backgroundColor: `var(--secondary-grey)`,
+          height: `75px`
+        }}>
           <Grid 
           container 
           direction="row"
@@ -86,7 +87,10 @@ export default function Header(props) {
           alignItems="center"
           >
 
-          {isMobile === false ? (
+          {/* This Ternary Operator Identifies whether or not the viewport is set to mobile or desktop */}
+          {/* In this case, the view port is mobile */}
+          {isMobile === true ? (
+
             <>
               <Grid item 
                 size={{ 
@@ -178,14 +182,14 @@ export default function Header(props) {
               </Grid>
             </>
 
-          ) : (
+          // In this case, the viewport is anything above laptop (1024px)
+          ) : isLaptop === true ? (
 
             <>
               <Grid item  
-                size={{
-                  mobile: 6, 
+                size={{ 
                   tablet: 6, 
-                  laptop: 6 
+                  laptop: 4 
                 }}
                 sx={{
                   textAlign: "start",
@@ -197,9 +201,8 @@ export default function Header(props) {
                 
               <Grid item
                 size={{
-                  mobile: 6, 
                   tablet: 6, 
-                  laptop: 6 
+                  laptop: 8 
                 }}
                 sx={{
                   textAlign: "end",
@@ -218,8 +221,146 @@ export default function Header(props) {
                   <Link to="/Resume" className={`${classes.headerLink}`}>
                     Resume
                   </Link>
+
+                  <Link
+                    sx={{
+                      color: `var(--secondary-green)`,
+                      padding: `25px`
+                    }}
+                    aria-controls={open ? 'basic-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
+                    className={`${classes.headerLink}`}
+                  >
+                    Socials
+                  </Link>
+
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                  }}
+                >
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="https://github.com/haydencfb" className={`${classes.headerLink}`}>
+                      <GitHubIcon fontSize="large" />
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.headerLink}`}>
+                      <LinkedInIcon fontSize="large" />
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="https://www.youtube.com/@haydencfb" className={`${classes.headerLink}`}>
+                      <YouTubeIcon fontSize="large" />
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.headerLink}`}>
+                      <InstagramIcon fontSize="large" />
+                    </Link>
+                  </MenuItem>
+                </Menu>
               </Grid>
             </>
+
+          ) : (
+
+            <>
+              <Grid item  
+                size={{ 
+                  tablet: 6, 
+                  laptop: 4 
+                }}
+                sx={{
+                  textAlign: "start",
+                  paddingLeft: "25px"
+                }}
+              >
+                <h2 className={`${classes.headerH2}`}>Hayden Fitzpatrick-Brintle</h2>
+              </Grid>
+                
+              <Grid item
+                size={{
+                  tablet: 6, 
+                  laptop: 8 
+                }}
+                sx={{
+                  textAlign: "end",
+                  paddingRight: "25px",
+                }}
+              >
+                  <Link to="/" className={`${classes.headerLink}`}>
+                    About
+                  </Link>
+                  <Link to="/Portfolio" className={`${classes.headerLink}`}>
+                    Portfolio
+                  </Link>
+                  <Link to="/Contact" className={`${classes.headerLink}`}>
+                    Contact
+                  </Link>
+                  <Link to="/Resume" className={`${classes.headerLink}`}>
+                    Resume
+                  </Link>
+
+                  <Link
+                    sx={{
+                      color: `var(--secondary-green)`,
+                      padding: `25px`
+                    }}
+                    aria-controls={open ? 'basic-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
+                    className={`${classes.headerLink}`}
+                  >
+                    Socials
+                  </Link>
+
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                  }}
+                >
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="https://github.com/haydencfb" className={`${classes.headerLink}`}>
+                      <GitHubIcon fontSize="large" />
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.headerLink}`}>
+                      <LinkedInIcon fontSize="large" />
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="https://www.youtube.com/@haydencfb" className={`${classes.headerLink}`}>
+                      <YouTubeIcon fontSize="large" />
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                    <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.headerLink}`}>
+                      <InstagramIcon fontSize="large" />
+                    </Link>
+                  </MenuItem>
+                </Menu>
+              </Grid>
+            </>
+
           )}
           </Grid>
 

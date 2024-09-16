@@ -23,4 +23,14 @@ body {
     padding: 25px;
     background: var(--primary-grey);
     max-width: fit-content;
+    /* position: relative; */
+}
+
+footer {
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
