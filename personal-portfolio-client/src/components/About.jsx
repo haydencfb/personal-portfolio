@@ -19,6 +19,7 @@ import muiLogo from "../assets/muiLogo.png";
 // React Hook Imports
 import * as React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 // MUI Logo Imports
 
@@ -26,15 +27,30 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid2';
 
 function About() {
+
+  const theme=createTheme({
+    breakpoints: { 
+      values: { 
+        desktop: 1280,
+        laptop: 1024,
+        tablet: 640,
+        mobile: 0,
+        },
+    },
+  });
+
+  const isMobile = useMediaQuery(`(max-width: 650px)`)
+  const isLaptop = useMediaQuery(`(max-width: 1350px)`)
+
   return (
 
+  <>
     <ThemeProvider
       theme={createTheme({
         breakpoints: {
           values: {
-            desktop: 1280,
-            laptop: 1024,
-            tablet: 640,
+            laptop: 1350,
+            tablet: 650,
             mobile: 0,
           },
         },
@@ -118,74 +134,88 @@ function About() {
 
           <Grid item
             size={{ 
-              mobile: 1, 
-              tablet: 1, 
-              laptop: 1 
+              mobile: 6, 
+              tablet: 3, 
+              laptop: 1.5 
             }}
+            sx={{textAlign: "center"}}
           >
-            <img src={htmlLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
+            <img src={htmlLogo} alt="HTML Logo" className={`${classes.aboutImg}`} />
           </Grid>
 
           <Grid item
             size={{ 
-              mobile: 1, 
-              tablet: 1, 
-              laptop: 1 
+              mobile: 6, 
+              tablet: 3, 
+              laptop: 1.5 
             }}
+            sx={{textAlign: "center"}}
           >
             <img src={cssLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
           <Grid item
             size={{ 
-              mobile: 1, 
-              tablet: 1, 
-              laptop: 1 
+              mobile: 6, 
+              tablet: 3, 
+              laptop: 1.5 
             }}
+            sx={{textAlign: "center"}}
           >
             <img src={jsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
           <Grid item
             size={{ 
-              mobile: 1, 
-              tablet: 1, 
-              laptop: 1 
+              mobile: 6, 
+              tablet: 3, 
+              laptop: 1.5 
             }}
+            sx={{textAlign: "center"}}
           >
             <img src={tsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
           <Grid item
             size={{ 
-              mobile: 1, 
-              tablet: 1, 
-              laptop: 1 
+              mobile: 6, 
+              tablet: 3, 
+              laptop: 1.5 
             }}
+            sx={{textAlign: "center"}}
           >
             <img src={reactLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
           <Grid item
             size={{ 
-              mobile: 1, 
-              tablet: 1, 
-              laptop: 1 
+              mobile: 6, 
+              tablet: 3, 
+              laptop: 1.5 
             }}
+            sx={{textAlign: "center"}}
           >
             <img src={nodejsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
-          <Grid item>
+          <Grid item
+            size={{ 
+              mobile: 6, 
+              tablet: 3, 
+              laptop: 1.5 
+            }}
+            sx={{textAlign: "center"}}
+          >
             <img src={gitLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
           <Grid item
             size={{ 
-              mobile: 1, 
-              tablet: 1, 
-              laptop: 1 
+              mobile: 6, 
+              tablet: 3, 
+              laptop: 1.5 
             }}
+            sx={{textAlign: "center"}}
           >
             <img src={muiLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
@@ -214,6 +244,7 @@ function About() {
 
       </Grid>
     </ThemeProvider>
+    </>
   );
 }
 

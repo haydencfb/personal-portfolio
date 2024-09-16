@@ -1,5 +1,5 @@
 .footerP {
     color: var(--primary-green);
+    background-color: var(--secondary-grey);
     text-align: center;
-    border: black 1px solid;
 }

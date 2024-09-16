@@ -11,6 +11,11 @@
     color: var(--secondary-green);
 }
 
+.headerH2 {
+    color: var(--secondary-green);
+    font-size: 15px;
+}
+
 .headerNav {
     display: flex;
     justify-content: center;
