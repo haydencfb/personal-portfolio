@@ -28,6 +28,7 @@ import Grid from '@mui/material/Grid2';
 
 function About() {
 
+  // Creating the variable to hold the viewports for the returns 
   const theme=createTheme({
     breakpoints: { 
       values: { 
@@ -39,11 +40,14 @@ function About() {
     },
   });
 
+  // Creating the variables that allow for the media queries to operate properly in the ternary argument
   const isMobile = useMediaQuery(`(max-width: 650px)`)
   const isLaptop = useMediaQuery(`(max-width: 1350px)`)
 
+  // Overall Return
   return (
 
+  // ThemeProvider, AppBar, and the Grid Container will always render, regardless of the viewport size
   <>
     <ThemeProvider
       theme={createTheme({
