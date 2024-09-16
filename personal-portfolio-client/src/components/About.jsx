@@ -132,6 +132,7 @@ function About() {
             ratione quo id accusamus rerum. 
           </p>
 
+
           <Grid item
             size={{ 
               mobile: 6, 
@@ -140,7 +141,7 @@ function About() {
             }}
             sx={{textAlign: "center"}}
           >
-            <img src={htmlLogo} alt="HTML Logo" className={`${classes.aboutImg}`} />
+              <img src={htmlLogo} alt="HTML Logo" className={`${classes.aboutImg}`} />
           </Grid>
 
           <Grid item
