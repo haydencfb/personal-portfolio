@@ -39,6 +39,7 @@ import Tooltip from '@mui/material/Tooltip';
 // Header Function
 export default function Header(props) {
 
+  // Creating the variable to hold the viewports for the returns 
   const theme=createTheme({
     breakpoints: { 
       values: { 
@@ -49,18 +50,21 @@ export default function Header(props) {
     },
   });
 
+  // Creating the variables that allow for the media queries to operate properly in the ternary argument
   const isMobile = useMediaQuery(`(max-width: 426px)`)
   const isLaptop = useMediaQuery(`(min-width: 769px)`)
+
+  // Consts that allow for the menus to work
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  // Overall Return
   return (  
     
     // ThemeProvider, AppBar, and the Grid Container will always render, regardless of the viewport size
@@ -189,7 +193,6 @@ export default function Header(props) {
               <Grid item  
                 size={{ 
                   tablet: 4, 
-                  // tablet: 6,
                   laptop: 4 
                 }}
                 sx={{
@@ -203,7 +206,6 @@ export default function Header(props) {
               <Grid item
                 size={{
                   tablet: 8, 
-                  // tablet: 6,
                   laptop: 8 
                 }}
                 sx={{
