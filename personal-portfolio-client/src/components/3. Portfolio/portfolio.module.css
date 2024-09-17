@@ -1,0 +1,18 @@
+.portfolioH1 {
+    text-align: center;
+    color: var(--secondary-green);
+}
+
+.portfolioLogo {
+    width: 100%;
+    height: auto;
+}
+
+.portfolioLink {
+    text-decoration: none;
+    color: var(--secondary-green);
+}
+
+.portfolioCard {
+    background-color: var(--secondary-grey);
+}

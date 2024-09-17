@@ -14,6 +14,7 @@ import reactLogo from "../../assets/reactLogo.webp";
 import nodejsLogo from "../../assets/nodejsLogo.png";
 import gitLogo from "../../assets/gitLogo.png";
 import muiLogo from "../../assets/muiLogo.png";
+import uziLogo from "../../assets/uzime.jpg"
 
 
 // React Hook Imports
@@ -67,14 +68,15 @@ function About() {
       spacing={2}
         sx={{
           justifyContent: "center",
+          alignItems: "center"
         }}
       >
 
         <Grid  
           size={{ 
             mobile: 12, 
-            tablet: 12, 
-            laptop: 12 
+            tablet: 6, 
+            laptop: 6 
           }}
           sx={{
             textAlign: "flex-start",
@@ -83,6 +85,18 @@ function About() {
           <h2 className={`${classes.nameH2}`}>Hayden Fitzpatrick-Brintle</h2>
           <h1 className={`${classes.webDevH1}`}>Web +</h1>
           <h1 className={`${classes.webDevH1}`}>Developer</h1>
+        </Grid>
+
+        <Grid
+        size={{ 
+          mobile: 12, 
+          tablet: 6, 
+          laptop: 6 
+        }}
+        sx={{
+          textAlign: "end",
+        }}>
+          <img src={uziLogo} alt="Profile Logo" className={`${classes.aboutLogo}`}/>
         </Grid>
       </Grid>
 

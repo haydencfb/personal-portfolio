@@ -7,13 +7,18 @@
     height: 100px;
 }
 
+.aboutLogo {
+    max-width: 100%;
+    height: auto;
+}
+
 .nameH2 {
     margin: 0px;
 }
 
 .webDevH1 {
     color: var(--primary-green);
-    font-size: clamp(5rem, 8vw, 10rem);
+    font-size: clamp(3rem, 8vw, 10rem);
     margin: 0px;
 }
 
