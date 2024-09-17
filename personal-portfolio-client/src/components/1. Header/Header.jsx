@@ -1,5 +1,5 @@
 // CSS Imports
-import classes from "../styles/header.module.css";
+import classes from "../1. Header/header.module.css";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -9,8 +9,8 @@ import Typography from '@mui/material/Typography';
 
 // React Hook Imports
 import * as React from 'react';
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -52,7 +52,7 @@ export default function Header(props) {
 
   // Creating the variables that allow for the media queries to operate properly in the ternary argument
   const isMobile = useMediaQuery(`(max-width: 426px)`)
-  const isLaptop = useMediaQuery(`(min-width: 769px)`)
+  const isLaptop = useMediaQuery(`(min-width: 768px)`)
 
   // Consts that allow for the menus to work
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -89,7 +89,7 @@ export default function Header(props) {
           container 
           direction="row"
           spacing={2}
-          alignItems="center"
+          aligns="center"
           >
 
           {/* This Ternary Operator Identifies whether or not the viewport is set to mobile or desktop */}
@@ -97,7 +97,7 @@ export default function Header(props) {
           {isMobile === true ? (
 
             <>
-              <Grid item 
+              <Grid  
                 size={{ 
                   mobile: 3,
                 }}
@@ -190,7 +190,7 @@ export default function Header(props) {
           // In this case, the viewport is anything above laptop (1024px)
           ) : isLaptop === true ? (
             <>
-              <Grid item  
+              <Grid  
                 size={{ 
                   tablet: 4, 
                   laptop: 4 
@@ -203,7 +203,7 @@ export default function Header(props) {
                 <h2 className={`${classes.headerH1}`}>Hayden Fitzpatrick-Brintle</h2>
               </Grid>
                 
-              <Grid item
+              <Grid
                 size={{
                   tablet: 8, 
                   laptop: 8 
@@ -280,7 +280,7 @@ export default function Header(props) {
           ) : (
 
             <>                
-              <Grid item 
+              <Grid 
                 size={{ 
                   mobile: 3,
                 }}
@@ -369,7 +369,7 @@ export default function Header(props) {
                 </Menu>
               </Grid>
 
-              <Grid item  
+              <Grid  
                 size={{ 
                   tablet: 9, 
                   laptop: 4 

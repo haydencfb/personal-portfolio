@@ -38,6 +38,11 @@
     text-decoration: none;
 }
 
+.headerLink:active {
+    color: var(--primary-brown);
+    text-decoration: none;
+}
+
 .headerImg {
     width: 200px;
     height: 200px;

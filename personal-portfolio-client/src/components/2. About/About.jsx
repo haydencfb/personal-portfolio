@@ -1,19 +1,19 @@
 // CSS Imports
-import classes from "../styles/about.module.css";
+import classes from "../2. About/about.module.css";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 // Image Imports
-import htmlLogo from "../assets/htmlLogo2.png";
-import cssLogo from "../assets/cssLogo.png";
-import jsLogo from "../assets/jsLogo.webp";
-import tsLogo from "../assets/tsLogo.png";
-import reactLogo from "../assets/reactLogo.webp";
-import nodejsLogo from "../assets/nodejsLogo.png";
-import gitLogo from "../assets/gitLogo.png";
-import muiLogo from "../assets/muiLogo.png";
+import htmlLogo from "../../assets/htmlLogo2.png";
+import cssLogo from "../../assets/cssLogo.png";
+import jsLogo from "../../assets/jsLogo.webp";
+import tsLogo from "../../assets/tsLogo.png";
+import reactLogo from "../../assets/reactLogo.webp";
+import nodejsLogo from "../../assets/nodejsLogo.png";
+import gitLogo from "../../assets/gitLogo.png";
+import muiLogo from "../../assets/muiLogo.png";
 
 
 // React Hook Imports
@@ -70,7 +70,7 @@ function About() {
         }}
       >
 
-        <Grid item 
+        <Grid  
           size={{ 
             mobile: 12, 
             tablet: 12, 
@@ -94,7 +94,7 @@ function About() {
           justifyContent: "center",
         }}
       >
-        <Grid item
+        <Grid 
             size={{
               mobile: 12,
               table: 12,
@@ -115,7 +115,7 @@ function About() {
             who takes pride in any project that I complete.
           </p>
 
-          <Grid item
+          <Grid 
             size={{
               mobile: 12,
               table: 12,
@@ -137,7 +137,7 @@ function About() {
           </p>
 
 
-          <Grid item
+          <Grid 
             size={{ 
               mobile: 6, 
               tablet: 3, 
@@ -148,7 +148,7 @@ function About() {
               <img src={htmlLogo} alt="HTML Logo" className={`${classes.aboutImg}`} />
           </Grid>
 
-          <Grid item
+          <Grid 
             size={{ 
               mobile: 6, 
               tablet: 3, 
@@ -159,7 +159,7 @@ function About() {
             <img src={cssLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
-          <Grid item
+          <Grid 
             size={{ 
               mobile: 6, 
               tablet: 3, 
@@ -170,7 +170,7 @@ function About() {
             <img src={jsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
-          <Grid item
+          <Grid 
             size={{ 
               mobile: 6, 
               tablet: 3, 
@@ -181,7 +181,7 @@ function About() {
             <img src={tsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
-          <Grid item
+          <Grid 
             size={{ 
               mobile: 6, 
               tablet: 3, 
@@ -192,7 +192,7 @@ function About() {
             <img src={reactLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
-          <Grid item
+          <Grid 
             size={{ 
               mobile: 6, 
               tablet: 3, 
@@ -203,7 +203,7 @@ function About() {
             <img src={nodejsLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
-          <Grid item
+          <Grid 
             size={{ 
               mobile: 6, 
               tablet: 3, 
@@ -214,7 +214,7 @@ function About() {
             <img src={gitLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
-          <Grid item
+          <Grid 
             size={{ 
               mobile: 6, 
               tablet: 3, 
@@ -225,7 +225,7 @@ function About() {
             <img src={muiLogo} alt="HTML Logo" className={`${classes.aboutImg}`}/>
           </Grid>
 
-          <Grid item
+          <Grid 
             size={{
               mobile: 12,
               table: 12,

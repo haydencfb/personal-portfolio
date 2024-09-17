@@ -1,4 +1,4 @@
-import classes from "../styles/main.module.css";
+import classes from "../3. Portfolio/portfolio.module.css";
 
 function Portfolio() {
     return (

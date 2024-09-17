@@ -13,7 +13,7 @@
 
 .webDevH1 {
     color: var(--primary-green);
-    font-size: 100px;
+    font-size: clamp(5rem, 8vw, 10rem);
     margin: 0px;
 }
 
