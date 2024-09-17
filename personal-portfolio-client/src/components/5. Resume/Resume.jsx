@@ -1,4 +1,4 @@
-import classes from "../styles/main.module.css";
+import classes from "../5. Resume/resume.module.css";
 
 function Resume() {
     return (

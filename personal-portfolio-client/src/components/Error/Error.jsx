@@ -1,4 +1,4 @@
-import classes from "../styles/main.module.css";
+import classes from "../Error/error.module.css";
 
 function Error() {
     return (
