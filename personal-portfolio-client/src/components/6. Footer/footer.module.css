@@ -1,5 +1,9 @@
-.footerP {
-    color: var(--primary-green);
-    background-color: var(--secondary-grey);
+.footer {
+    color: var(--secondary-green);
     text-align: center;
+    font-weight: bold;
+}
+
+.footerButton {
+    color: var(--secondary-green);
 }
