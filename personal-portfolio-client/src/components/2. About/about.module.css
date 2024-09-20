@@ -1,5 +1,5 @@
 .aboutH1 {
-    color: var(--primary-green);
+    color: var(--secondary-green);
 }
 
 .aboutImg {
@@ -17,12 +17,12 @@
 }
 
 .webDevH1 {
-    color: var(--primary-green);
+    color: var(--secondary-green);
     font-size: clamp(3rem, 8vw, 10rem);
     margin: 0px;
 }
 
 .paragraph {
-    color: var(--primary-green);
+    color: var(--secondary-green);
     font-size: 20px;
 }

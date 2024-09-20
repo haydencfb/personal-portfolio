@@ -38,9 +38,11 @@
     text-decoration: none;
 }
 
-.headerLink:active {
+.headerLinkActive {
     color: var(--primary-brown);
     text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
 }
 
 .headerImg {

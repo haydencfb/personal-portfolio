@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 // React Hook Imports
 import * as React from 'react';
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -33,7 +33,6 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 
 // Header Function
@@ -134,27 +133,35 @@ export default function Header(props) {
                   <Divider />
 
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="/" className={`${classes.headerLink}`}>
+                    <NavLink to="/" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                       About
-                    </Link>
+                    </NavLink>
                   </MenuItem>
 
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="/Portfolio" className={`${classes.headerLink}`}>
+                    <NavLink to="/Portfolio" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                       Portfolio
-                    </Link>
+                    </NavLink>
                   </MenuItem>
 
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="/Contact" className={`${classes.headerLink}`}>
+                    <NavLink to="/Contact" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                       Contact
-                    </Link>
+                    </NavLink>
                   </MenuItem>
 
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="/Resume" className={`${classes.headerLink}`}>
+                    <NavLink to="/Resume" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                       Resume
-                    </Link>
+                    </NavLink>
                   </MenuItem>
 
                   <Divider />
@@ -213,18 +220,26 @@ export default function Header(props) {
                   paddingRight: "25px",
                 }}
               >
-                  <Link to="/" className={`${classes.headerLink}`}>
+                  <NavLink to="/" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                     About
-                  </Link>
-                  <Link to="/Portfolio" className={`${classes.headerLink}`}>
+                  </NavLink>
+                  <NavLink to="/Portfolio" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                     Portfolio
-                  </Link>
-                  <Link to="/Contact" className={`${classes.headerLink}`}>
+                  </NavLink>
+                  <NavLink to="/Contact" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                     Contact
-                  </Link>
-                  <Link to="/Resume" className={`${classes.headerLink}`}>
+                  </NavLink>
+                  <NavLink to="/Resume" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                     Resume
-                  </Link>
+                  </NavLink>
 
                   <IconButton
                     sx={{
@@ -317,27 +332,35 @@ export default function Header(props) {
                   <Divider />
 
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="/" className={`${classes.headerLink}`}>
+                    <NavLink to="/" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                       About
-                    </Link>
+                    </NavLink>
                   </MenuItem>
 
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="/Portfolio" className={`${classes.headerLink}`}>
+                    <NavLink to="/Portfolio" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                       Portfolio
-                    </Link>
+                    </NavLink>
                   </MenuItem>
 
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="/Contact" className={`${classes.headerLink}`}>
+                    <NavLink to="/Contact" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                       Contact
-                    </Link>
+                    </NavLink>
                   </MenuItem>
 
                   <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="/Resume" className={`${classes.headerLink}`}>
+                    <NavLink to="/Resume" className={({ isActive }) => 
+                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                    >
                       Resume
-                    </Link>
+                    </NavLink>
                   </MenuItem>
 
                   <Divider />

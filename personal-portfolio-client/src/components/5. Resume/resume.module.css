@@ -1,0 +1,28 @@
+.resumeH1 {
+    text-align: center;
+    color: var(--secondary-green);
+}
+
+.resumeUl {
+    background-color: var(--secondary-grey);
+    height: 100%;
+    /* height: 100vh; */
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 50px;
+}
+
+.resumeLi {
+    color: var(--secondary-green);
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    padding: 5px;
+}
+
+.resumeButton {
+    color: var(--secondary-green);
+    font-weight: bold;
+    background-color: var(--secondary-grey);
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 10px;
+}

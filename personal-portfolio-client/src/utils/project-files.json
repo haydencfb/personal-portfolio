@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Employee Database",
+        "description": "This project allows the user to interact with an employee database that houses information about every included employee, while also allowing for the information to be manipulated or for future employees/information to be created.",
+        "deployed": "https://github.com/haydencfb/employee-database",
+        "github": "https://github.com/haydencfb/employee-database",
+        "image": "employeeDB"
+    },
+    {
+        "name": "Portfolio",
+        "description": "This is a React based project that houses a collection of skills and information about my resume, portfolio, and options of contact and reference points.",
+        "deployed": "https://github.com/haydencfb/personal-portfolio",
+        "github": "https://github.com/haydencfb/personal-portfolio",
+        "image": "portImg"
+    },
+    {
+        "name": "Weather Dashboard",
+        "description": "This project is uses the OpenWeather API to allow the user to see the five day forecast of the weather in their desired selected city, as well as the current tempurature at the time of their search.",
+        "deployed": "https://zero9-weather-dashboard-module-challenge.onrender.com",
+        "github": "https://github.com/haydencfb/weather-dashboard",
+        "image": "weatherD"
+    },
+    {
+        "name": "Vehicle Builder",
+        "description": "This command-line 'game' is designed to allow the user to choose a cehicle type they would like to build or select! The vehicles included are cars, trucks, and motorbikes, to which the user can design their own, or select from a pre-existing one! From then on, the user can request different actions for the vehicle to commit.",
+        "deployed": "https://github.com/haydencfb/vehicle-builder",
+        "github": "https://github.com/haydencfb/vehicle-builder",
+        "image": "vehicleB"
+    },
+    {
+        "name": "README Generator",
+        "description": "This repository houses the 07-Node.JS homework that creates an automated README through the command line that uses the inquirer npm package. The command line asks the user a few preselected questions, and according to the user's answers/submissions, their README will be demonstrated and deployed.",
+        "deployed": "https://github.com/haydencfb/high-quality-README-generator",
+        "github": "https://github.com/haydencfb/high-quality-README-generator",
+        "image": "readmeG"
+    },
+    {
+        "name": "Solid Dollop Card Game",
+        "description": "This is a memory card game that challenges the user to be able to memorize where cards are positioned on a board in order to find all of the matching pairs. This project uses local storage to store the player's stats locally on their system so that they may be able to keep track of their records in order to improve.",
+        "deployed": "https://github.com/haydencfb/solid-dollop-memory-card-game",
+        "github": "https://github.com/haydencfb/solid-dollop-memory-card-game",
+        "image": "solidD"
+    }
+]
