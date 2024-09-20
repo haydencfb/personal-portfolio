@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import uziLogo from "../../assets/uzime.jpg";
 import classes from "../4. Contact/contact.module.css"
 
 export default function Contact() {
@@ -19,6 +20,11 @@ const [formState, setFormState] = useState({
 const [userMessage, setUserMessage] = useState("");
 const [valid, setValid] = useState(false);
 
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 const handleChange = (e) => {
     setFormState({
     ...formState,
@@ -28,6 +34,15 @@ const handleChange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateEmail(formState.email)) {
+        setUserMessage('Email is invalid');
+        setTimeout(() => {
+            setUserMessage("");
+            }, 3000);
+        return;
+    } 
+
     setUserMessage("Your message has been sent!");
     setFormState({
     yourName: "",
@@ -68,7 +83,7 @@ return (
         width: { xs: "100%", sm: "80%", md: "70%", lg: "60%" },
         }}
     >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}></Avatar>
+        <Avatar src={uziLogo} sx={{ m: 1, bgcolor: "secondary.main" }}></Avatar>
         <Typography component="h1" variant="h5" sx={{ color: "black" }}>
         I&apos;d love to hear from you!
         </Typography>
