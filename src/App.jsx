@@ -3,7 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Footer from './components/6. Footer/Footer.jsx';
 
-import classes from "../src/components/app.module.css"
+import classes from "./app.module.css";
 
 
 function App() {
