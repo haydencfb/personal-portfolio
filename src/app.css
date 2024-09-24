@@ -12,6 +12,13 @@
 
     --primary-orange: #994930;
     --secondary-orange: #B88672;
+
+    --primary-color: #172A3A;
+    --accent-color: #508991;
+    --terciary-color: #004346;
+    --pink: #81717A;
+    --white: #F2F4F3;
+    --grey: #4C5C68;
 }
 
 /* Global CSS */
@@ -20,7 +27,7 @@ html, body, main, #root {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--primary-grey);
+    background: var(--primary-color);
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -33,7 +40,8 @@ main {
 }
 
 footer {
-    background-color: var(--secondary-grey);
+    background-color: var(--grey);
+    /* background-color: black; */
     margin-top: auto;
     width: 100%;
     box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2);

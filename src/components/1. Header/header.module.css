@@ -1,18 +1,9 @@
-:root {
-    --primary-green: #82896E;
-    --secondary-green: #264025;
-    --primary-brown: #977347;
-    --secondary-brown: #4C3A1A;
-    --primary-grey: #DDCBB7;
-    --secondary-grey: #9E9F98;
-}
-
 .headerH1 {
-    color: var(--secondary-green);
+    color: var(--accent-color);
 }
 
 .headerH2 {
-    color: var(--secondary-green);
+    color: var(--accent-color);
     font-size: 15px;
 }
 
@@ -27,19 +18,19 @@
 }
 
 .headerLink {
-    color: var(--secondary-green);
+    color: var(--accent-color);
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
 }
 
 .headerLink:hover {
-    color: var(--primary-brown);
+    color: var(--terciary-color);
     text-decoration: none;
 }
 
 .headerLinkActive {
-    color: var(--primary-brown);
+    color: var(--terciary-color);
     text-decoration: none;
     padding: 10px;
     font-weight: bold;

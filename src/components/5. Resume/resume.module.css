@@ -1,6 +1,6 @@
 .resumeH1 {
     text-align: center;
-    color: var(--secondary-green);
+    color: var(--accent-color);
 }
 
 .resumeUl {
@@ -13,13 +13,13 @@
 }
 
 .resumeLi {
-    color: var(--secondary-green);
+    color: var(--accent-color);
     font-size: clamp(1rem, 1.5vw, 3rem);
     padding: 5px;
 }
 
 .resumeButton {
-    color: var(--secondary-green);
+    color: var(--accent-color);
     font-weight: bold;
     background-color: var(--secondary-grey);
     border-radius: 5px;

@@ -1,9 +1,9 @@
 .footer {
-    color: var(--secondary-green);
+    color: var(--accent-color);
     text-align: center;
     font-weight: bold;
 }
 
 .footerButton {
-    color: var(--secondary-green);
+    color: var(--accent-color);
 }

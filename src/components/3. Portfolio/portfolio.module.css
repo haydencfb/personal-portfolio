@@ -1,6 +1,6 @@
 .portfolioH1 {
     text-align: center;
-    color: var(--secondary-green);
+    color: var(--accent-color);
 }
 
 .portfolioLogo {
@@ -10,7 +10,7 @@
 
 .portfolioLink {
     text-decoration: none;
-    color: var(--secondary-green);
+    color: var(--accent-color);
 }
 
 .portfolioCard {

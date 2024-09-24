@@ -81,7 +81,7 @@ export default function Header(props) {
         <AppBar 
         position="fixed"
         sx={{
-          backgroundColor: `var(--secondary-grey)`,
+          backgroundColor: `var(--grey)`,
           height: `75px`
         }}>
           <Grid 
@@ -104,7 +104,7 @@ export default function Header(props) {
                 <Tooltip title="Open Menu">
                   <IconButton
                     sx={{
-                      color: `var(--secondary-green)`,
+                      color: `var(--accent-color)`,
                       padding: `25px`
                     }}
                     aria-controls={open ? 'basic-menu' : undefined}
@@ -243,7 +243,7 @@ export default function Header(props) {
 
                   <IconButton
                     sx={{
-                      color: `var(--secondary-green)`,
+                      color: `var(--accent-color)`,
                       padding: `25px`
                     }}
                     aria-controls={open ? 'basic-menu' : undefined}
@@ -303,7 +303,7 @@ export default function Header(props) {
                 <Tooltip title="Open Menu">
                   <IconButton
                     sx={{
-                      color: `var(--secondary-green)`,
+                      color: `var(--accent-color)`,
                       padding: `25px`
                     }}
                     aria-controls={open ? 'basic-menu' : undefined}

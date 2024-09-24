@@ -71,7 +71,7 @@ return (
     >
     <Box className="name"
         sx={{
-        backgroundColor: "var(--secondary-grey)",
+        backgroundColor: "var(--grey)",
         padding: 5,
         display: "flex",
         flexDirection: "column",
@@ -146,9 +146,9 @@ return (
             sx={{
             mt: 3,
             mb: 2,
-            backgroundColor: "#010041",
+            backgroundColor: 'var(--accent-color)',
             // example of using pseudo classes inside the sx prop:
-            "&:hover": { backgroundColor: "green" },
+            "&:hover": { backgroundColor: "var(--terciary-color)" },
             }}
         >
             Submit
