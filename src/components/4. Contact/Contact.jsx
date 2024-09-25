@@ -84,10 +84,10 @@ return (
         }}
     >
         <Avatar src={uziLogo} sx={{ m: 1, bgcolor: "secondary.main" }}></Avatar>
-        <Typography component="h1" variant="h5" sx={{ color: "black" }}>
+        <Typography component="h1" variant="h5" sx={{ color: "var(--accent-color)" }}>
         I&apos;d love to hear from you!
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
+        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }} >
         <Grid container spacing={2}>
             <Grid size={{xs: 12}}>
             <TextField

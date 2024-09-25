@@ -4,7 +4,7 @@
 }
 
 .resumeUl {
-    background-color: var(--secondary-grey);
+    background-color: var(--grey);
     height: 100%;
     /* height: 100vh; */
     border-radius: 10px;
@@ -21,7 +21,7 @@
 .resumeButton {
     color: var(--accent-color);
     font-weight: bold;
-    background-color: var(--secondary-grey);
+    background-color: var(--grey);
     border-radius: 5px;
     box-shadow: none;
     padding: 10px;
