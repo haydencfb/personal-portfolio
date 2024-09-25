@@ -68,7 +68,8 @@ function About() {
       spacing={2}
         sx={{
           justifyContent: "center",
-          alignItems: "center"
+          alignItems: "center",
+          padding: "10px"
         }}
       >
 
@@ -116,11 +117,12 @@ function About() {
             }}
             sx={{
               textAlign: "center",
+              backgroundColor: "var(--grey)",
+              borderRadius: "5px"
             }}
           >
             <h1 className={`${classes.aboutH1}`}>About</h1>
-          </Grid>
-          <p className={`${classes.paragraph}`}>
+            <p className={`${classes.paragraph}`}>
             With a background that is full of communication and seeking improvement,
             paired with my engaging personality, I am proficient in collaborative
             environments. As someone who has working in fast-paced environments, I
@@ -128,6 +130,7 @@ function About() {
             manner does not lack organization and quality of work, as I am someone
             who takes pride in any project that I complete.
           </p>
+          </Grid>
 
           <Grid 
             size={{
@@ -137,11 +140,12 @@ function About() {
             }}
             sx={{
               textAlign: "center",
+              backgroundColor: "var(--grey)",
+              borderRadius: "5px"
             }}
           >
             <h1 className={`${classes.aboutH1}`}>Skills</h1>
-          </Grid>
-          <p className={`${classes.paragraph}`}>
+            <p className={`${classes.paragraph}`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
             aliquam odio reprehenderit? Repellat voluptate sunt praesentium
             consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
@@ -149,6 +153,7 @@ function About() {
             consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
             ratione quo id accusamus rerum. 
           </p>
+          </Grid>
 
 
           <Grid 
@@ -247,11 +252,12 @@ function About() {
             }}
             sx={{
               textAlign: "center",
+              backgroundColor: "var(--grey)",
+              borderRadius: "5px"
             }}
           >
             <h1 className={`${classes.aboutH1}`}>Background</h1>
-          </Grid>
-          <p className={`${classes.paragraph}`}>
+            <p className={`${classes.paragraph}`}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
             enim architecto minima quisquam, quibusdam doloremque omnis incidunt
             alias velit rerum, quae minus, magni quia nihil quos? Neque voluptatum
@@ -260,6 +266,7 @@ function About() {
             consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
             ratione quo id accusamus rerum. 
           </p>
+          </Grid>
 
       </Grid>
     </ThemeProvider>

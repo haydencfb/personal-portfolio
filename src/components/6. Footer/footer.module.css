@@ -7,3 +7,8 @@
 .footerButton {
     color: var(--accent-color);
 }
+
+.footerButton:hover {
+    color: var(--terciary-color);
+    text-decoration: none;
+}

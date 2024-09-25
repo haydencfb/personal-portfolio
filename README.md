@@ -13,9 +13,7 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Issues](#issues)
-  - [Contributions](#contributions)
-  
- - [License](#license)
+  - [License](#license)
   - [Tests](#tests)
   - [Questions](#questions)
 
@@ -27,9 +25,6 @@
 
   ## Issues
   If there happens to be an issue, users can contact me VIA GitHub, my listed email, the social media platforms, and lastly through the incorperated messaging system!
-
-  ## Contributions
-  
 
   ## License
     This project is licensed under the MIT license.
