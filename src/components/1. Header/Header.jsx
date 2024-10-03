@@ -82,7 +82,7 @@ export default function Header(props) {
         position="fixed"
         sx={{
           backgroundColor: `var(--grey)`,
-          height: `75px`
+          height: `85px`
         }}>
           <Grid 
           container 
@@ -96,7 +96,9 @@ export default function Header(props) {
           {isMobile === true ? (
 
             <>
-              <Grid  
+              <Grid
+                display='flex'
+                alignItems='center'  
                 size={{ 
                   mobile: 3,
                 }}
@@ -197,13 +199,14 @@ export default function Header(props) {
           // In this case, the viewport is anything above laptop (1024px)
           ) : isLaptop === true ? (
             <>
-              <Grid  
+              <Grid 
+                display='flex'
+                alignItems='center' 
                 size={{ 
                   tablet: 4, 
-                  laptop: 4 
+                  laptop: 5 
                 }}
                 sx={{
-                  textAlign: "start",
                   paddingLeft: "25px"
                 }}
               >
@@ -211,12 +214,14 @@ export default function Header(props) {
               </Grid>
                 
               <Grid
+                display='flex'
+                justifyContent='end'
+                alignItems='center'
                 size={{
                   tablet: 8, 
-                  laptop: 8 
+                  laptop: 7 
                 }}
                 sx={{
-                  textAlign: "end",
                   paddingRight: "25px",
                 }}
               >
@@ -296,6 +301,8 @@ export default function Header(props) {
 
             <>                
               <Grid 
+                display='flex'
+                alignItems='center'
                 size={{ 
                   mobile: 3,
                 }}
@@ -392,13 +399,15 @@ export default function Header(props) {
                 </Menu>
               </Grid>
 
-              <Grid  
+              <Grid
+                display='flex'
+                justifyContent='end'
+                alignItems='center'  
                 size={{ 
                   tablet: 9, 
                   laptop: 4 
                 }}
                 sx={{
-                  textAlign: "end",
                   paddingRight: "25px"
                 }}
               >
