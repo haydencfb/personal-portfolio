@@ -16,6 +16,8 @@
   - [License](#license)
   - [Tests](#tests)
   - [Questions](#questions)
+  - [Link](#link)
+  - [Screenshots](#screenshots)
 
   ## Installation
   Users do not have to install this, rather they can visit the deployed link that I have in the about or below at the bottom of this README.
@@ -34,3 +36,10 @@
 
   ## Questions
   If you have any questions, please feel free to reach out to me at haydenfitzbrintle@gmail.com or visit my GitHub profile at [https://github.com/haydencfb]
+
+  ## Link
+  Deployed Link: https://haydencfb.netlify.app/
+
+  ## Screenshots
+  ![Capture](https://github.com/user-attachments/assets/e310b47c-fc93-42d0-a39d-8b4653952ac3)
+
