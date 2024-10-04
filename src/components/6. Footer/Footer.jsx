@@ -38,12 +38,12 @@ function Footer() {
                 }
             })}>
                 <footer className={`${classes.footer}`}>
-                    <p>© 2024 - Hayden Fitzpatrick-Brintle</p>
 
                         <Grid container
                         direction="row"
                         spacing={2}
                         aligns="center"
+                        paddingTop='15px'
                         >
 
                             <Grid
@@ -88,6 +88,16 @@ function Footer() {
                                 <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.footerButton}`}>
                                     <InstagramIcon fontSize="large" />
                                 </Link>
+                            </Grid>
+
+                            <Grid
+                                size={{
+                                    mobile: 12,
+                                    tablet: 12,
+                                    laptop: 12
+                                }}
+                            >
+                                <p>© 2024 - Hayden Fitzpatrick-Brintle</p>
                             </Grid>
 
                         </Grid>

@@ -124,12 +124,7 @@ function About() {
           >
             <h1 className={`${classes.aboutH1}`}>About</h1>
             <p className={`${classes.paragraph}`}>
-            With a background that is full of communication and seeking improvement,
-            paired with my engaging personality, I am proficient in collaborative
-            environments. As someone who has working in fast-paced environments, I
-            am able to work efficientely with my time. This being said, a timely
-            manner does not lack organization and quality of work, as I am someone
-            who takes pride in any project that I complete.
+            I am a dedicated full-stack software developer and skilled photographer/videographer with a passion for creating seamless digital experiences and capturing visual stories. I bring a comprehensive skill set in web and app development, paired with technical expertise in photography and videography, ensuring every project meets high standards of quality and creativity. My work is backed by a strong foundation of hands-on experience, attention to detail, and a commitment to delivering impactful results.
           </p>
           </Grid>
 
@@ -147,12 +142,7 @@ function About() {
           >
             <h1 className={`${classes.aboutH1}`}>Skills</h1>
             <p className={`${classes.paragraph}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            aliquam odio reprehenderit? Repellat voluptate sunt praesentium
-            consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
-            ratione quo id accusamus rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiisaliquam odio reprehenderit? Repellat voluptate sunt praesentium
-            consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
-            ratione quo id accusamus rerum. 
+            I bring a blend of efficiency, creativity, attention to detail, and determination to every project I take on. As a full-stack software developer, I am proficient in languages including, but not limited to, HTML, CSS, JavaScript, and React, allowing me to craft responsive and intuitive user experiences. My approach is driven by a commitment to problem-solving and optimizing processes for seamless functionality. In photography and videography, I apply these skills through a keen eye for detail, creative vision, and precise editing, coupled with strong communication abilities to bring concepts to life visually and effectively.
           </p>
           </Grid>
 
@@ -259,13 +249,7 @@ function About() {
           >
             <h1 className={`${classes.aboutH1}`}>Background</h1>
             <p className={`${classes.paragraph}`}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
-            enim architecto minima quisquam, quibusdam doloremque omnis incidunt
-            alias velit rerum, quae minus, magni quia nihil quos? Neque voluptatum
-            reiciendis eligendi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            aliquam odio reprehenderit? Repellat voluptate sunt praesentium
-            consequuntur officia fuga delectus dolor deleniti libero amet, ipsum
-            ratione quo id accusamus rerum. 
+            I hold a bachelor’s degree in psychology with an emphasis in sports performance from Grand Canyon University, paired with two years of experience as a 2x certified personal trainer. This background has given me a unique perspective on motivation, discipline, and performance. Alongside my professional experience in photography and videography, I am soon to be certified in software development, expanding my skill set to include dynamic digital solutions across visual and technical fields.
           </p>
           </Grid>
 
