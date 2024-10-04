@@ -27,15 +27,15 @@ export default function ProjectCard ({ project }) {
             sx={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "stretch"
             }}
         >
-            <Card sx={{ 
-                width: 500,
-                height: "100%",
-                backgroundColor: "var(--grey)"
+            <Card 
+                sx={{ 
+                    width: 500,
+                    height: "100%",
+                    backgroundColor: "var(--grey)"
                 }}
-                >
+            >
                 <CardActionArea>
                 <a href={deployed} className={`${classes.portfolioLink}`}>
                     <CardMedia
@@ -44,7 +44,7 @@ export default function ProjectCard ({ project }) {
                     image={projects[image]}
                     alt={name}
                     />
-                    <CardContent className={`${classes.portfolioCard}`}>
+                    <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {name}
                     </Typography>

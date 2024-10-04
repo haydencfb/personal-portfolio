@@ -73,14 +73,14 @@ function About() {
         }}
       >
 
-        <Grid  
+        <Grid
+          display='flex'
+          flexDirection='column'
+          alignItems='start'  
           size={{ 
             mobile: 12, 
             tablet: 6, 
             laptop: 6 
-          }}
-          sx={{
-            textAlign: "flex-start",
           }}
         >
           <h2 className={`${classes.nameH2}`}>Hayden Fitzpatrick-Brintle</h2>
@@ -89,14 +89,15 @@ function About() {
         </Grid>
 
         <Grid
-        size={{ 
-          mobile: 12, 
-          tablet: 6, 
-          laptop: 6 
-        }}
-        sx={{
-          textAlign: "end",
-        }}>
+          display='flex'
+          flexDirection='column'
+          alignItems='start'
+          size={{ 
+            mobile: 12, 
+            tablet: 6, 
+            laptop: 6 
+          }}
+        >
           <img src={uziLogo} alt="Profile Logo" className={`${classes.aboutLogo}`}/>
         </Grid>
       </Grid>
