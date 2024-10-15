@@ -1,11 +1,9 @@
-// Import React Hooks
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
 // Import CSS Hooks
 import classes from "../dev-portfolio-page/dev-portfolio.module.css";
 
 // Import MUI Material Hooks
 import Grid from '@mui/material/Grid2';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 // Import Component Hooks
 import ProjectCard from "../../components/Project-Card/Project-Card.jsx";
