@@ -1,21 +1,30 @@
-// CSS Imports
-import classes from "../1. Header/header.module.css";
+// Import React Hooks
+import * as React from 'react';
+import { Link, NavLink } from "react-router-dom";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+// Import CSS Hooks
+import classes from "./header.module.css";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import Typography from '@mui/material/Typography';
 
+// Import MUI Material Hooks
 
-// React Hook Imports
-import * as React from 'react';
-import { Link, NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+  // MUI Grid Imports
+  import Grid from '@mui/material/Grid2';
+  import Box from '@mui/material/Box';
 
+  // MUI Nav Menu Imports
+  import Menu from '@mui/material/Menu';
+  import MenuItem from '@mui/material/MenuItem';
+  import Divider from '@mui/material/Divider';
+  import AppBar from '@mui/material/AppBar';
+  import Tooltip from '@mui/material/Tooltip';
 
-// MUI Logo Imports
+// Import MUI Icon Hooks
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -23,17 +32,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
-
-// MUI Grid Imports
-import Grid from '@mui/material/Grid2';
-import Box from '@mui/material/Box';
-
-// MUI Nav Menu Imports
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Divider from '@mui/material/Divider';
-import AppBar from '@mui/material/AppBar';
-import Tooltip from '@mui/material/Tooltip';
 
 // Header Function
 export default function Header(props) {

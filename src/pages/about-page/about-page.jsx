@@ -1,11 +1,20 @@
-// CSS Imports
+// Import React Hooks
+import * as React from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+// Import CSS Hooks
 import classes from "../about-page/about.module.css";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-// Image Imports
+// Import MUI Material Hooks
+  // MUI Grid Imports
+  import Grid from '@mui/material/Grid2';
+
+// Import Image Hooks
 import htmlLogo from "../../assets/htmlLogo2.png";
 import cssLogo from "../../assets/cssLogo.png";
 import jsLogo from "../../assets/jsLogo.webp";
@@ -15,17 +24,6 @@ import nodejsLogo from "../../assets/nodejsLogo.png";
 import gitLogo from "../../assets/gitLogo.png";
 import muiLogo from "../../assets/muiLogo.png";
 import uziLogo from "../../assets/uzime.jpg"
-
-
-// React Hook Imports
-import * as React from 'react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-
-// MUI Logo Imports
-
-// MUI Grid Imports
-import Grid from '@mui/material/Grid2';
 
 function About() {
 

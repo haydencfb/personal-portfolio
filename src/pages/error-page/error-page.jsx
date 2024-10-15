@@ -1,3 +1,4 @@
+// Import CSS Hooks
 import classes from "../error-page/error.module.css";
 
 function Error() {

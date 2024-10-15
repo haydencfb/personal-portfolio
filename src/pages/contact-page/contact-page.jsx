@@ -1,13 +1,16 @@
-
+// Import React Hooks
 import { useState } from "react";
+
+// Import MUI Material Hooks
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+
+// Import Image Hooks
 import uziLogo from "../../assets/uzime.jpg";
-import classes from "../contact-page/contact.module.css";
 
 export default function Contact() {
 const [formState, setFormState] = useState({

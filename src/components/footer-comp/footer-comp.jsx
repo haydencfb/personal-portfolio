@@ -1,16 +1,19 @@
-import classes from "../6. Footer/footer.module.css";
-// import classes from "../app.module.css";
+// Import React Hooks
+import * as React from 'react';
+import { Link } from "react-router-dom";
 
+// Import CSS Hooks
+import classes from "./footer.module.css";
+
+// Import MUI Material Hooks
+import Grid from '@mui/material/Grid2';
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+
+// Import MUI Icon Hooks
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Paper from '@mui/material/Paper';
-
-import * as React from 'react';
-import { Link } from "react-router-dom";
-import Grid from '@mui/material/Grid2';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 function Footer() {
 

@@ -1,4 +1,7 @@
+// Import CSS Hooks
 import classes from "../resume-page/resume.module.css";
+
+// Import Image Hooks
 import myResume from "../../assets/mockResume.png";
 
 function Resume() {

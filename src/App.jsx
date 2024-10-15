@@ -1,7 +1,7 @@
-import Header from './components/1. Header/Header.jsx';
+import Header from './components/header-comp/header-comp.jsx';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import Footer from './components/6. Footer/Footer.jsx';
+import Footer from './components/footer-comp/footer-comp.jsx';
 
 import "./app.css";
 
