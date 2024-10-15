@@ -1,5 +1,5 @@
 // CSS Imports
-import classes from "../2. About/about.module.css";
+import classes from "../about-page/about.module.css";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';

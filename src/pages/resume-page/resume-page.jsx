@@ -1,4 +1,4 @@
-import classes from "../5. Resume/resume.module.css";
+import classes from "../resume-page/resume.module.css";
 import myResume from "../../assets/mockResume.png";
 
 function Resume() {

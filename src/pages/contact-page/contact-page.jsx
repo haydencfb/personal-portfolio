@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import uziLogo from "../../assets/uzime.jpg";
-import classes from "../4. Contact/contact.module.css"
+import classes from "../contact-page/contact.module.css";
 
 export default function Contact() {
 const [formState, setFormState] = useState({

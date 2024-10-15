@@ -1,7 +1,7 @@
-import classes from "../3. Portfolio/portfolio.module.css";
+import classes from "../dev-portfolio-page/dev-portfolio.module.css";
 import Grid from '@mui/material/Grid2';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import ProjectCard from "../Project-Card/Project-Card.jsx";
+import ProjectCard from "../../components/Project-Card/Project-Card.jsx";
 import projectFiles from "../../utils/project-files.json";
 
 

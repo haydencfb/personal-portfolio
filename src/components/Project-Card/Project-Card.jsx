@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import { Link } from "react-router-dom";
-import classes from "../3. Portfolio/portfolio.module.css";
+import classes from "../../pages/dev-portfolio-page/dev-portfolio.module.css";
 import Grid from '@mui/material/Grid2';
 
 

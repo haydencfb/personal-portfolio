@@ -3,11 +3,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
 
-import About from './components/2. About/About.jsx'
-import Portfolio from './components/3. Portfolio/Portfolio.jsx'
-import Contact from './components/4. Contact/Contact.jsx'
-import Resume from './components/5. Resume/Resume.jsx'
-import Error from './components/Error/Error.jsx'
+import About from './pages/about-page/about-page.jsx';
+import Portfolio from './pages/dev-portfolio-page/dev-portfolio.jsx';
+import Contact from './pages/contact-page/contact-page.jsx';
+import Resume from './pages/resume-page/resume-page.jsx';
+import Error from './pages/error-page/error-page.jsx';
 
 const router = createBrowserRouter([
   {
