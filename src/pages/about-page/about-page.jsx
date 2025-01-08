@@ -13,6 +13,7 @@ import '@fontsource/roboto/700.css';
 // Import MUI Material Hooks
   // MUI Grid Imports
   import Grid from '@mui/material/Grid2';
+  import Button from '@mui/material/Button';
 
 // Import Image Hooks
 import htmlLogo from "../../assets/htmlLogo2.png";
@@ -57,6 +58,20 @@ function About() {
             mobile: 0,
           },
         },
+        palette: {
+          primary: {
+              main: "#32CD32",
+          },
+          secondary: {
+              main: "#508991",
+          },
+          success: {
+              main: "#004346",
+          },
+          info: {
+              main: "#81717A",
+          },
+      }
       })}
     >
 
@@ -80,16 +95,23 @@ function About() {
             tablet: 6, 
             laptop: 6 
           }}
+          sx={{
+            paddingRight: "50px"
+          }}
         >
-          <h2 className={`${classes.nameH2}`}>Hayden Fitzpatrick-Brintle</h2>
-          <h1 className={`${classes.webDevH1}`}>Web +</h1>
-          <h1 className={`${classes.webDevH1}`}>Developer</h1>
+          <h1 className={`${classes.nameH1}`}>Hayden Fitzpatrick-Brintle</h1>
+          <h2 className={`${classes.webDevH1}`}>Fullstack Developer</h2>
+          <p className={`${classes.paragraph}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eligendi recusandae! Odit ipsa ab molestiae, dolor et eveniet. Ratione tempore reiciendis ut quos inventore esse voluptatibus. Assumenda quos molestias unde?</p>
+          <Button variant='contained' color='primary' sx={{
+            marginTop: "10px",
+            width: "100%"
+          }}>Let's Connect!</Button>
         </Grid>
 
         <Grid
           display='flex'
           flexDirection='column'
-          alignItems='start'
+          alignItems='center'
           size={{ 
             mobile: 12, 
             tablet: 6, 
@@ -100,7 +122,7 @@ function About() {
         </Grid>
       </Grid>
 
-      <Grid 
+      {/* <Grid 
       container 
       direction="row"
       spacing={2}
@@ -251,7 +273,7 @@ function About() {
           </p>
           </Grid>
 
-      </Grid>
+      </Grid> */}
     </ThemeProvider>
     </>
   );

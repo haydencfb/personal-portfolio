@@ -11,8 +11,12 @@
 .portfolioLink {
     text-decoration: none;
     color: var(--accent-color);
+    font-family: "Antonio", sans-serif;
+    font-size: clamp(1.25rem, 2vw, 3rem);
 }
 
 .portfolioCard {
     background-color: var(--grey);
+    display: flex;
+    align-items: end;
 }

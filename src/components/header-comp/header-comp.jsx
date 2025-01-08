@@ -41,14 +41,14 @@ export default function Header(props) {
     breakpoints: { 
       values: { 
         mobile: 0,
-        tablet: 426,
+        tablet: 436,
         laptop: 768
         },
     },
   });
 
   // Creating the variables that allow for the media queries to operate properly in the ternary argument
-  const isMobile = useMediaQuery(`(max-width: 426px)`)
+  const isMobile = useMediaQuery(`(max-width: 435px)`)
   const isLaptop = useMediaQuery(`(min-width: 768px)`)
 
   // Consts that allow for the menus to work
@@ -71,356 +71,336 @@ export default function Header(props) {
           breakpoints: {
             values: {
               mobile: 0,
-              tablet: 426,
+              tablet: 436,
               laptop: 768
             }
           }
       })}>
-        <AppBar 
-        position="fixed"
+        <Box
         sx={{
-          backgroundColor: `var(--grey)`,
-          height: `85px`
-        }}>
-          <Grid 
-          container 
-          direction="row"
-          spacing={2}
-          aligns="center"
-          >
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+        >
+          <AppBar 
+          position="static"
+          sx={{
+            backgroundColor: `var(--grey)`,
+            height: `85px`,
+            width: `90%`,
+            borderRadius: `0px 0px 15px 15px`,
+          }}>
+            <Grid 
+            container 
+            direction="row"
+            spacing={2}
+            aligns="center"
+            >
 
-          {/* This Ternary Operator Identifies whether or not the viewport is set to mobile or desktop */}
-          {/* In this case, the view port is mobile */}
-          {isMobile === true ? (
+            {/* This Ternary Operator Identifies whether or not the viewport is set to mobile or desktop */}
+            {/* In this case, the view port is mobile */}
+            {isMobile === true ? (
 
-            <>
-              <Grid
-                display='flex'
-                alignItems='center'  
-                size={{ 
-                  mobile: 3,
-                }}
-              >
-                <Tooltip title="Open Menu">
-                  <IconButton
-                    sx={{
-                      color: `var(--accent-color)`,
-                      padding: `25px`
-                    }}
-                    aria-controls={open ? 'basic-menu' : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                  >
-                    <MenuIcon fontSize="large"/>
-                  </IconButton>
-                </Tooltip>
-
-                <Menu
-                  id="basic-menu"
-                  anchorEl={anchorEl}
-                  open={open}
-                  onClose={handleClose}
-                  MenuListProps={{
-                    'aria-labelledby': 'basic-button',
+              <>
+                <Grid
+                  display='flex'
+                  alignItems='center'  
+                  size={{ 
+                    mobile: 3,
                   }}
                 >
-
-                  <MenuItem sx={{justifyContent: "center"}}>
-                    HFB+
-                  </MenuItem>
-
-                  <Divider />
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <NavLink to="/" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                  <Tooltip title="Open Menu">
+                    <IconButton
+                      sx={{
+                        color: `var(--accent-color)`,
+                        padding: `25px`
+                      }}
+                      aria-controls={open ? 'basic-menu' : undefined}
+                      aria-haspopup="true"
+                      aria-expanded={open ? 'true' : undefined}
+                      onClick={handleClick}
                     >
+                      <MenuIcon fontSize="large"/>
+                    </IconButton>
+                  </Tooltip>
+
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                      'aria-labelledby': 'basic-button',
+                    }}
+                  >
+
+                    <MenuItem sx={{justifyContent: "center"}}>
+                      HFB+
+                    </MenuItem>
+
+                    <Divider />
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <NavLink to="/" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                        About
+                      </NavLink>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <NavLink to="/Portfolio" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                        Portfolio
+                      </NavLink>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <NavLink to="/Contact" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                        Contact
+                      </NavLink>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <NavLink to="/Resume" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                        Resume
+                      </NavLink>
+                    </MenuItem>
+
+                    <Divider />
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <Link to="https://github.com/haydencfb" className={`${classes.headerLink}`}>
+                        <GitHubIcon fontSize="large" />
+                      </Link>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.headerLink}`}>
+                        <LinkedInIcon fontSize="large" />
+                      </Link>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <Link to="https://www.youtube.com/@haydencfb" className={`${classes.headerLink}`}>
+                        <YouTubeIcon fontSize="large" />
+                      </Link>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.headerLink}`}>
+                        <InstagramIcon fontSize="large" />
+                      </Link>
+                    </MenuItem>
+
+                  </Menu>
+                </Grid>
+              </>
+
+            // In this case, the viewport is anything above laptop (1024px)
+            ) : isLaptop === true ? (
+              <>  
+                <Grid
+                  display='flex'
+                  justifyContent='center'
+                  alignItems='center'
+                  size={{
+                    laptop: 3
+                  }}
+                  sx={{
+                    padding: `25px`,
+                  }}
+                >
+                    <NavLink to="/" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
                       About
                     </NavLink>
-                  </MenuItem>
+                </Grid>
 
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <NavLink to="/Portfolio" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                      Portfolio
-                    </NavLink>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <NavLink to="/Contact" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                      Contact
-                    </NavLink>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <NavLink to="/Resume" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                      Resume
-                    </NavLink>
-                  </MenuItem>
-
-                  <Divider />
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://github.com/haydencfb" className={`${classes.headerLink}`}>
-                      <GitHubIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.headerLink}`}>
-                      <LinkedInIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.youtube.com/@haydencfb" className={`${classes.headerLink}`}>
-                      <YouTubeIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.headerLink}`}>
-                      <InstagramIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
-
-                </Menu>
-              </Grid>
-            </>
-
-          // In this case, the viewport is anything above laptop (1024px)
-          ) : isLaptop === true ? (
-            <>
-              <Grid 
-                display='flex'
-                alignItems='center' 
-                size={{ 
-                  tablet: 4, 
-                  laptop: 5 
-                }}
-                sx={{
-                  paddingLeft: "25px"
-                }}
-              >
-                <h2 className={`${classes.headerH1}`}>Hayden Fitzpatrick-Brintle</h2>
-              </Grid>
-                
-              <Grid
-                display='flex'
-                justifyContent='end'
-                alignItems='center'
-                size={{
-                  tablet: 8, 
-                  laptop: 7 
-                }}
-                sx={{
-                  paddingRight: "25px",
-                }}
-              >
-                  <NavLink to="/" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                    About
-                  </NavLink>
-                  <NavLink to="/Portfolio" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                    Portfolio
-                  </NavLink>
-                  <NavLink to="/Contact" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                    Contact
-                  </NavLink>
-                  <NavLink to="/Resume" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                    Resume
-                  </NavLink>
-
-                  <IconButton
-                    sx={{
-                      color: `var(--accent-color)`,
-                      padding: `25px`
-                    }}
-                    aria-controls={open ? 'basic-menu' : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                    className={`${classes.headerLink}`}
-                  >
-                    <ConnectWithoutContactIcon fontSize="large"/>
-                  </IconButton>
-
-                <Menu
-                  id="basic-menu"
-                  anchorEl={anchorEl}
-                  open={open}
-                  onClose={handleClose}
-                  MenuListProps={{
-                    'aria-labelledby': 'basic-button',
+                <Grid
+                  display='flex'
+                  justifyContent='center'
+                  alignItems='center'
+                  size={{
+                    laptop: 3 
+                  }}
+                  sx={{
+                    padding: `25px`
                   }}
                 >
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://github.com/haydencfb" className={`${classes.headerLink}`}>
-                      <GitHubIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
+                    <NavLink to="/Portfolio" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                      Projects
+                    </NavLink>
+                </Grid>
 
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.headerLink}`}>
-                      <LinkedInIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.youtube.com/@haydencfb" className={`${classes.headerLink}`}>
-                      <YouTubeIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.headerLink}`}>
-                      <InstagramIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
-                </Menu>
-              </Grid>
-            </>
-
-          // In this case, the viewport is anything between mobile and laptop (650 - 1024px)
-          ) : (
-
-            <>                
-              <Grid 
-                display='flex'
-                alignItems='center'
-                size={{ 
-                  mobile: 3,
-                }}
-              >
-                <Tooltip title="Open Menu">
-                  <IconButton
-                    sx={{
-                      color: `var(--accent-color)`,
-                      padding: `25px`
-                    }}
-                    aria-controls={open ? 'basic-menu' : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                  >
-                    <MenuIcon fontSize="large"/>
-                  </IconButton>
-                </Tooltip>
-
-                <Menu
-                  id="basic-menu"
-                  anchorEl={anchorEl}
-                  open={open}
-                  onClose={handleClose}
-                  MenuListProps={{
-                    'aria-labelledby': 'basic-button',
+                <Grid
+                  display='flex'
+                  justifyContent='center'
+                  alignItems='center'
+                  size={{
+                    laptop: 3
+                  }}
+                  sx={{
+                    padding: `25px`
                   }}
                 >
-
-                  <MenuItem sx={{justifyContent: "center"}}>
-                    HFB+
-                  </MenuItem>
-
-                  <Divider />
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <NavLink to="/" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                      About
-                    </NavLink>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <NavLink to="/Portfolio" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                      Portfolio
-                    </NavLink>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
                     <NavLink to="/Contact" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
-                      Contact
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                      Connect
                     </NavLink>
-                  </MenuItem>
+                </Grid>
 
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                <Grid
+                  display='flex'
+                  justifyContent='center'
+                  alignItems='center'
+                  size={{
+                    laptop: 3
+                  }}
+                  sx={{
+                    padding: `25px`
+                  }}
+                >
                     <NavLink to="/Resume" className={({ isActive }) => 
-                    isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                    >
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
                       Resume
                     </NavLink>
-                  </MenuItem>
+                </Grid>
+              </>
 
-                  <Divider />
+            // In this case, the viewport is anything between mobile and laptop (650 - 1024px)
+            ) : (
+              <>                
+                <Grid 
+                  display='flex'
+                  alignItems='center'
+                  size={{ 
+                    mobile: 3,
+                  }}
+                >
+                  <Tooltip title="Open Menu">
+                    <IconButton
+                      sx={{
+                        color: `var(--accent-color)`,
+                        padding: `25px`
+                      }}
+                      aria-controls={open ? 'basic-menu' : undefined}
+                      aria-haspopup="true"
+                      aria-expanded={open ? 'true' : undefined}
+                      onClick={handleClick}
+                    >
+                      <MenuIcon fontSize="large"/>
+                    </IconButton>
+                  </Tooltip>
 
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://github.com/haydencfb" className={`${classes.headerLink}`}>
-                      <GitHubIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                      'aria-labelledby': 'basic-button',
+                    }}
+                  >
 
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.headerLink}`}>
-                      <LinkedInIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
+                    <MenuItem sx={{justifyContent: "center"}}>
+                      HFB+
+                    </MenuItem>
 
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.youtube.com/@haydencfb" className={`${classes.headerLink}`}>
-                      <YouTubeIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
+                    <Divider />
 
-                  <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                    <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.headerLink}`}>
-                      <InstagramIcon fontSize="large" />
-                    </Link>
-                  </MenuItem>
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <NavLink to="/" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                        About
+                      </NavLink>
+                    </MenuItem>
 
-                </Menu>
-              </Grid>
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <NavLink to="/Portfolio" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                        Portfolio
+                      </NavLink>
+                    </MenuItem>
 
-              <Grid
-                display='flex'
-                justifyContent='end'
-                alignItems='center'  
-                size={{ 
-                  tablet: 9, 
-                  laptop: 4 
-                }}
-                sx={{
-                  paddingRight: "25px"
-                }}
-              >
-                <h2 className={`${classes.headerH1}`}>Hayden Fitzpatrick-Brintle</h2>
-              </Grid>
-            </>
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <NavLink to="/Contact" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                        Contact
+                      </NavLink>
+                    </MenuItem>
 
-          )}
-          </Grid>
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <NavLink to="/Resume" className={({ isActive }) => 
+                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      >
+                        Resume
+                      </NavLink>
+                    </MenuItem>
 
-          
+                    <Divider />
 
-        </AppBar>
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <Link to="https://github.com/haydencfb" className={`${classes.headerLink}`}>
+                        <GitHubIcon fontSize="large" />
+                      </Link>
+                    </MenuItem>
 
-      <Box sx={{ paddingTop: '75px' }}></Box>
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.headerLink}`}>
+                        <LinkedInIcon fontSize="large" />
+                      </Link>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <Link to="https://www.youtube.com/@haydencfb" className={`${classes.headerLink}`}>
+                        <YouTubeIcon fontSize="large" />
+                      </Link>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.headerLink}`}>
+                        <InstagramIcon fontSize="large" />
+                      </Link>
+                    </MenuItem>
+
+                  </Menu>
+                </Grid>
+
+                <Grid
+                  display='flex'
+                  justifyContent='end'
+                  alignItems='center'  
+                  size={{ 
+                    tablet: 9, 
+                    laptop: 4 
+                  }}
+                  sx={{
+                    paddingRight: "25px"
+                  }}
+                >
+                  <h2 className={`${classes.headerH2}`}>Hayden Fitzpatrick-Brintle</h2>
+                </Grid>
+              </>
+
+            )}
+            </Grid>
+          </AppBar>
+        </Box>
       </ThemeProvider>
     </>
   );

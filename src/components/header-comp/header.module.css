@@ -5,6 +5,7 @@
 .headerH2 {
     color: var(--accent-color);
     font-size: 15px;
+    letter-spacing: 5px;
 }
 
 .headerNav {
@@ -18,22 +19,36 @@
 }
 
 .headerLink {
-    color: var(--accent-color);
+    color: var(--terciary-color);
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
+    letter-spacing: 5px;
 }
 
 .headerLink:hover {
-    color: var(--terciary-color);
+    color: var(--quaternary-color);
     text-decoration: none;
 }
 
 .headerLinkActive {
+    color: var(--quaternary-color);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.menuLink {
     color: var(--terciary-color);
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
+}
+
+.menuLink:hover {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 .headerImg {

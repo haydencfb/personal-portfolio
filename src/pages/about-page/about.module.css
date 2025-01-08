@@ -9,6 +9,7 @@
 
 .aboutLogo {
     max-width: 100%;
+    /* max-width: 500px; */
     height: auto;
 }
 
@@ -17,14 +18,20 @@
     margin: 0px;
 }
 
+.nameH1 {
+    color: var(--accent-color);
+    font-size: clamp(2rem, 4vw, 4rem);
+    margin: 0px;
+}
+
 .webDevH1 {
     color: var(--accent-color);
-    font-size: clamp(3rem, 8vw, 10rem);
+    font-size: clamp(2rem, 4vw, 4rem);
     margin: 0px;
 }
 
 .paragraph {
     color: var(--accent-color);
     font-size: 20px;
-    margin: 10px;
+    /* margin: 10px; */
 }

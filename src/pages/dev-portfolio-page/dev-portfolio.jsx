@@ -35,21 +35,59 @@ function Portfolio() {
                     }
                 }
             })}>
-                <h1 className={`${classes.portfolioH1}`}>Portfolio</h1>
-
                 <Grid 
                     container 
                     direction="row"
                     spacing={2}
                     aligns="center"
+                    sx={{
+                        marginTop: "5rem",
+                    }}
                 >
+                    <Grid
+                        display='flex'
+                        flexDirection='column'
+                        alignItems='start'  
+                        justifyContent='center'
+                        size={{ 
+                            mobile: 1, 
+                            tablet: 1, 
+                            laptop: 1 
+                        }}
+                    >
+                        <h1 className={`${classes.portfolioH1}`}>
+                            P<br/>
+                            r<br/>
+                            o<br/>
+                            j<br/>
+                            e<br/>
+                            c<br/>
+                            t<br/>
+                            s</h1>
+                    </Grid>
 
-                    {projectFiles.map(project => (
-                            <ProjectCard project={project} />
-                    ))}
-
+                    <Grid
+                        display='flex'
+                        flexDirection='row'
+                        alignItems='start'  
+                        size={{ 
+                            mobile: 11, 
+                            tablet: 11, 
+                            laptop: 11 
+                        }}
+                    >
+                        <Grid 
+                            container 
+                            direction="row"
+                            spacing={2}
+                            aligns="center"
+                        >
+                            {projectFiles.map(project => (
+                                    <ProjectCard project={project} />
+                            ))}
+                        </Grid>
+                    </Grid>
                 </Grid>
-
             </ThemeProvider>
         </>
     )

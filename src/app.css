@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap);
+
 /* Root CSS */
 :root {
     /* Color Variables */
@@ -13,12 +15,14 @@
     --primary-orange: #994930;
     --secondary-orange: #B88672;
 
-    --primary-color: #172A3A;
-    --accent-color: #508991;
-    --terciary-color: #004346;
+    --primary-color: #0D0D0D;
+    --accent-color: #C3C3C3;
+    --terciary-color: #A3A3A3;
+    --quaternary-color: #FFFFFF;
     --pink: #81717A;
     --white: #F2F4F3;
-    --grey: #4C5C68;
+    /* --grey: #4C5C68; */
+    --grey: #000000;
 }
 
 /* Global CSS */
@@ -28,20 +32,31 @@ html, body, main, #root {
     padding: 0;
     box-sizing: border-box;
     background: var(--primary-color);
-    font-family: 'Roboto', sans-serif;
+
+    font-family: "Antonio", sans-serif, serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-main {
-    margin: 25px;
-    padding: 25px;
+@media (min-width: 768px) {
+    main {
+        margin: 25px 100px 25px 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 25px 25px 25px 25px;
+    }
 }
 
 footer {
     background-color: var(--grey);
-    /* background-color: black; */
     margin-top: auto;
     width: 100%;
     box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2);

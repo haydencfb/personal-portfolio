@@ -2,7 +2,6 @@ import * as projects from "../../assets/index.js";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import { Link } from "react-router-dom";
@@ -32,7 +31,6 @@ export default function ProjectCard ({ project }) {
             <Card 
                 sx={{ 
                     width: 500,
-                    height: "100%",
                     backgroundColor: "var(--grey)"
                 }}
             >
@@ -44,22 +42,19 @@ export default function ProjectCard ({ project }) {
                     image={projects[image]}
                     alt={name}
                     />
-                    <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {name}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        {description}
-                    </Typography>
+                    <CardContent
+                    sx={{
+                        height: "100%",
+                    }}>
+                    <CardActions className={`${classes.portfolioCard}`}>
+                        <Link to={github} size="small" color="primary" className={`${classes.portfolioLink}`}>
+                            {name}
+                        </Link>
+                    </CardActions>
                     </CardContent>
                     </a>
                 </CardActionArea>
-            <CardActions className={`${classes.portfolioCard}`}>
-                <Link to={github} size="small" color="primary" className={`${classes.portfolioLink}`}>
-                    GitHub Repo
-                </Link>
-            </CardActions>
         </Card>
-    </Grid>
+        </Grid>
     )
 }

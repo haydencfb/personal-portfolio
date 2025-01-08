@@ -83,7 +83,7 @@ return (
         borderRadius: 2,
         boxShadow: 10,
         // example of media queries inside the sx prop:
-        width: { xs: "100%", sm: "80%", md: "70%", lg: "60%" },
+        width: { xs: "75%", sm: "75%", md: "75%", lg: "75%" },
         }}
     >
         <Avatar src={uziLogo} sx={{ m: 1, bgcolor: "secondary.main" }}></Avatar>
