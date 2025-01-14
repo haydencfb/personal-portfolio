@@ -9,8 +9,13 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ProjectCard from "../../components/Project-Card/Project-Card.jsx";
 import projectFiles from "../../utils/project-files.json";
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
 
 function Portfolio() {
+
+    const isMobile = useMediaQuery(`(max-width: 435px)`)
 
     // Creating the variable to hold the viewports for the returns 
     const theme=createTheme({
@@ -44,34 +49,50 @@ function Portfolio() {
                         marginTop: "5rem",
                     }}
                 >
-                    <Grid
-                        display='flex'
-                        flexDirection='column'
-                        alignItems='start'  
-                        justifyContent='center'
-                        size={{ 
-                            mobile: 1, 
-                            tablet: 1, 
-                            laptop: 1 
-                        }}
-                    >
-                        <h1 className={`${classes.portfolioH1}`}>
-                            P<br/>
-                            r<br/>
-                            o<br/>
-                            j<br/>
-                            e<br/>
-                            c<br/>
-                            t<br/>
-                            s</h1>
-                    </Grid>
+
+                    {isMobile === true ? (
+                        <Grid
+                            display='flex'
+                            flexDirection='column'
+                            alignItems='center'  
+                            justifyContent='center'
+                            size={{ 
+                                mobile: 12
+                            }}
+                        >
+                            <h1 className={`${classes.portfolioH1}`}>PROJECTS</h1>
+                        </Grid>
+                    ) : (
+                        <Grid
+                            display='flex'
+                            flexDirection='column'
+                            alignItems='center'  
+                            justifyContent='center'
+                            size={{ 
+                                mobile: 1, 
+                                tablet: 1, 
+                                laptop: 1 
+                            }}
+                        >
+                            <h1 className={`${classes.portfolioH1}`}>
+                                P<br/>
+                                R<br/>
+                                O<br/>
+                                J<br/>
+                                E<br/>
+                                C<br/>
+                                T<br/>
+                                S</h1>
+                        </Grid>
+                    )}
 
                     <Grid
                         display='flex'
                         flexDirection='row'
-                        alignItems='start'  
+                        alignItems='center' 
+                        justifyContent='center' 
                         size={{ 
-                            mobile: 11, 
+                            mobile: 12, 
                             tablet: 11, 
                             laptop: 11 
                         }}
@@ -81,6 +102,7 @@ function Portfolio() {
                             direction="row"
                             spacing={2}
                             aligns="center"
+                            justifyContent="center"
                         >
                             {projectFiles.map(project => (
                                     <ProjectCard project={project} />

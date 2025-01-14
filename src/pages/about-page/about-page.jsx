@@ -24,7 +24,7 @@ import reactLogo from "../../assets/reactLogo.webp";
 import nodejsLogo from "../../assets/nodejsLogo.png";
 import gitLogo from "../../assets/gitLogo.png";
 import muiLogo from "../../assets/muiLogo.png";
-import uziLogo from "../../assets/uzime.jpg"
+import uziLogo from "../../assets/profilePic.jpg"
 
 function About() {
 
@@ -82,7 +82,7 @@ function About() {
         sx={{
           justifyContent: "center",
           alignItems: "center",
-          padding: "10px"
+          padding: "10px",
         }}
       >
 
