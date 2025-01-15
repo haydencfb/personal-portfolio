@@ -145,7 +145,7 @@ export default function Header(props) {
                       <NavLink to="/" className={({ isActive }) => 
                       isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
                       >
-                        About
+                        ABOUT
                       </NavLink>
                     </MenuItem>
 
@@ -166,10 +166,10 @@ export default function Header(props) {
                     </MenuItem>
 
                     <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/Resume" className={({ isActive }) => 
+                      <NavLink to="/RESUME" className={({ isActive }) => 
                       isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
                       >
-                        Resume
+                        RESUME
                       </NavLink>
                     </MenuItem>
 
@@ -220,7 +220,7 @@ export default function Header(props) {
                     <NavLink to="/" className={({ isActive }) => 
                       isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
                       >
-                      About
+                      ABOUT
                     </NavLink>
                 </Grid>
 
@@ -238,7 +238,7 @@ export default function Header(props) {
                     <NavLink to="/Portfolio" className={({ isActive }) => 
                       isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
                       >
-                      Projects
+                      PROJECTS
                     </NavLink>
                 </Grid>
 
@@ -256,7 +256,7 @@ export default function Header(props) {
                     <NavLink to="/Contact" className={({ isActive }) => 
                       isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
                       >
-                      Connect
+                      CONNECT
                     </NavLink>
                 </Grid>
 
@@ -271,10 +271,10 @@ export default function Header(props) {
                     padding: `25px`
                   }}
                 >
-                    <NavLink to="/Resume" className={({ isActive }) => 
+                    <NavLink to="/RESUME" className={({ isActive }) => 
                       isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
                       >
-                      Resume
+                      RESUME
                     </NavLink>
                 </Grid>
               </>
@@ -324,7 +324,7 @@ export default function Header(props) {
                       <NavLink to="/" className={({ isActive }) => 
                       isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
                       >
-                        About
+                        ABOUT
                       </NavLink>
                     </MenuItem>
 
@@ -345,10 +345,10 @@ export default function Header(props) {
                     </MenuItem>
 
                     <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/Resume" className={({ isActive }) => 
+                      <NavLink to="/RESUME" className={({ isActive }) => 
                       isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
                       >
-                        Resume
+                        RESUME
                       </NavLink>
                     </MenuItem>
 
@@ -393,7 +393,7 @@ export default function Header(props) {
                     paddingRight: "25px"
                   }}
                 >
-                  <h2 className={`${classes.headerH2}`}>Hayden Fitzpatrick-Brintle</h2>
+                  <h2 className={`${classes.headerH2}`}>HAYDEN FITZ-BRINTLE</h2>
                 </Grid>
               </>
 

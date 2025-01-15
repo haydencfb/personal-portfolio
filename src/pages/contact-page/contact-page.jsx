@@ -8,11 +8,16 @@ import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 // Import Image Hooks
 import uziLogo from "../../assets/profilePic.jpg";
 
 export default function Contact() {
+
+const isMobile = useMediaQuery(`(max-width: 435px)`);
+
 const [formState, setFormState] = useState({
     yourName: "",
     company: "",
@@ -60,153 +65,195 @@ const handleSubmit = (e) => {
 
 return (
     <>
-                <Box
-                    style={{
-                        //example of using a style object, able to use this in any react component.
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        paddingTop: "50px",
-                        paddingBottom: 10,
-                        height: "100vh",
-                        width: "100%",
+        <Grid
+            container 
+            direction="row"
+            spacing={2}
+            aligns="center"
+            justifyContent="center"
+            alignItems="center"
+            sx={{
+                marginTop: "5rem",
+                // width: "100%",
+            }}
+        >
+{/* 
+            {isMobile === true ? (
+                <Grid
+                    display='flex'
+                    flexDirection='column'
+                    alignItems='center'  
+                    justifyContent='center'
+                    size={{ 
+                        mobile: 12
+                    }}
+                    sx={{
+                        color: "var(--accent-color)"
                     }}
                 >
-                    <Box>
-                        <h1>Contact Me</h1>
-                    </Box>
-                    <Box 
-                        className="name"
-                            sx={{
-                                backgroundColor: "var(--grey)",
-                                padding: 5,
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                borderRadius: 2,
-                                boxShadow: 10,
-                            }}
-                    >
-                        <Avatar 
-                            src={uziLogo} 
-                            sx={{ m: 1, bgcolor: "secondary.main" }}
-                        />
-                        <Typography 
-                            component="h1" 
-                            variant="h5" 
-                            sx={{ 
-                                color: "var(--accent-color)" 
-                            }}
-                        >
-                            I&apos;d love to hear from you!
-                        </Typography>
-                        <Box 
-                            component="form" 
-                            onSubmit={handleSubmit} 
-                            sx={{ 
-                                mt: 3 
-                            }}
-                        >
-                        <Grid 
-                            container 
-                            spacing={2}
-                        >
-                            <Grid size={{xs: 12}}>
-                                <TextField
-                                    autoComplete="given-name"
-                                    name="yourName"
-                                    value={formState.yourName}
-                                    onChange={handleChange}
-                                    required
-                                    fullWidth
-                                    id="yourName"
-                                    label="Your Name"
-                                    autoFocus
-                                />
-                            </Grid>
-                            <Grid size={{xs: 12}}>
-                                <TextField
-                                    fullWidth
-                                    id="company"
-                                    label="Company (optional)"
-                                    name="company"
-                                    value={formState.company}
-                                    onChange={handleChange}
-                                    autoComplete="company"
-                                />
-                            </Grid>
-                            <Grid size={{xs: 12}}>
-                                <TextField
-                                    required
-                                    fullWidth
-                                    id="email"
-                                    label="Email Address"
-                                    name="email"
-                                    value={formState.email}
-                                    onChange={handleChange}
-                                    autoComplete="email"
-                                />
-                            </Grid>
-                            <Grid size={{xs: 12}}>
-                                <TextField
-                                    required
-                                    fullWidth
-                                    name="message"
-                                    value={formState.message}
-                                    onChange={handleChange}
-                                    label="Your Message"
-                                    type="text"
-                                    multiline
-                                    minRows={4}
-                                />
-                            </Grid>
-                        </Grid>
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            sx={{
-                            mt: 3,
-                            mb: 2,
-                            backgroundColor: 'var(--accent-color)',
-                            // example of using pseudo classes inside the sx prop:
-                            "&:hover": { backgroundColor: "var(--terciary-color)" },
-                            }}
-                        >
-                            Submit
-                        </Button>
-                        </Box>
-                        {userMessage && (
-                        <Typography
-                        // example of conditional styles using sx prop:
-                            sx={{
-                            color: "green",  // default text color
-                            ...(!valid && {
-                                color: "red",  // color is red if form is not valid
-                            }),
-                            }}
-                        >
-                            {userMessage}
-                        </Typography>
-                        )}
-                    </Box>
-                </Box>
+                    <h1>
+                        CONTACT
+                    </h1>
+                </Grid>
+            ) : (
+                <Grid
+                    display='flex'
+                    flexDirection='row'
+                    alignItems='start'  
+                    justifyContent='start'
+                    size={{ 
+                        tablet: 1,
+                        laptop: 1
+                    }}
+                    sx={{
+                        color: "var(--accent-color)"
+                    }}
+                >
+                    <h1>
+                        C<br/>
+                        O<br/>
+                        N<br/>
+                        T<br/>
+                        A<br/>
+                        C<br/>
+                        T<br/>
+                    </h1>
+                </Grid>
+            )} */}
 
-                <Box
-                style={{
-                    //example of using a style object, able to use this in any react component.
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    width: "20%",
-                }}>
-                    <Box>
-                        <h1>hello</h1>
-                    </Box>
+            <Grid
+                display='flex'
+                flexDirection='column'
+                alignItems='center'  
+                justifyContent='center'
+                size={{ 
+                    mobile: 12,
+                    tablet: 11,
+                    laptop: 11
+                }}
+            >
+                <Avatar 
+                    src={uziLogo} 
+                    sx={{ 
+                        m: 1, 
+                        bgcolor: "secondary.main" 
+                    }}
+                />
+                <Typography 
+                    component="h1" 
+                    variant="h5" 
+                    sx={{ 
+                        color: "var(--accent-color)",
+                    }}
+                >
+                    I&apos;d love to hear from you!
+                </Typography>
+                <Box 
+                    component="form" 
+                    onSubmit={handleSubmit} 
+                    sx={{ 
+                        mt: 3 
+                    }}
+                >
+                <Grid 
+                    container 
+                    spacing={2}
+                >
+                    <Grid 
+                    size={{
+                        xs: 12}}
+                    sx={{
+                        backgroundColor: "var(--accent-color)",
+                    }}
+                    >
+                        <TextField
+                            autoComplete="given-name"
+                            name="yourName"
+                            value={formState.yourName}
+                            onChange={handleChange}
+                            required
+                            fullWidth
+                            id="yourName"
+                            label="Your Name"
+                            autoFocus
+                        />
+                    </Grid>
+                    <Grid size={{xs: 12}}
+                    sx={{
+                        backgroundColor: "var(--accent-color)",
+                    }}>
+                        <TextField
+                            fullWidth
+                            id="company"
+                            label="Company (optional)"
+                            name="company"
+                            value={formState.company}
+                            onChange={handleChange}
+                            autoComplete="company"
+                        />
+                    </Grid>
+                    <Grid size={{xs: 12}}
+                    sx={{
+                        backgroundColor: "var(--accent-color)",
+                    }}>
+                        <TextField
+                            required
+                            fullWidth
+                            id="email"
+                            label="Email Address"
+                            name="email"
+                            value={formState.email}
+                            onChange={handleChange}
+                            autoComplete="email"
+                        />
+                    </Grid>
+                    <Grid size={{xs: 12}}
+                    sx={{
+                        backgroundColor: "var(--accent-color)",
+                    }}>
+                        <TextField
+                            required
+                            fullWidth
+                            name="message"
+                            value={formState.message}
+                            onChange={handleChange}
+                            label="Your Message"
+                            type="text"
+                            multiline
+                            minRows={4}
+                        />
+                    </Grid>
+                </Grid>
+                <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{
+                    mt: 3,
+                    mb: 2,
+                    backgroundColor: 'var(--accent-color)',
+                    // example of using pseudo classes inside the sx prop:
+                    "&:hover": { backgroundColor: "green" },
+                    }}
+                >
+                    Submit
+                </Button>
                 </Box>
+                {userMessage && (
+                <Typography
+                // example of conditional styles using sx prop:
+                    sx={{
+                    color: "green",  // default text color
+                    ...(!valid && {
+                        color: "red",  // color is red if form is not valid
+                    }),
+                    }}
+                >
+                    {userMessage}
+                </Typography>
+                )}
+            </Grid>
+        </Grid>
     </>
 );
 }

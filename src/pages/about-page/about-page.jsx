@@ -86,7 +86,53 @@ function About() {
         }}
       >
 
-        <Grid
+        {isMobile === true ? (
+          <>
+            <Grid
+              display='flex'
+              flexDirection='column'
+              alignItems='center'  
+              size={{ 
+                mobile: 12
+              }}
+              sx={{
+                // paddingRight: "50px"
+              }}
+            >
+              <h1 className={`${classes.nameH1}`}>Hayden Fitzpatrick-Brintle</h1>
+              <h2 className={`${classes.webDevH1}`}>Fullstack Developer</h2>
+              <p className={`${classes.paragraph}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eligendi recusandae! Odit ipsa ab molestiae, dolor et eveniet. Ratione tempore reiciendis ut quos inventore esse voluptatibus. Assumenda quos molestias unde?</p>
+              <Button variant='contained' color='primary' sx={{
+                marginTop: "10px",
+                width: "100%"
+              }}>Let's Connect!</Button>
+            </Grid>
+          </>
+        ) : (
+          <>
+            <Grid
+              display='flex'
+              flexDirection='column'
+              alignItems='start'  
+              size={{ 
+                tablet: 6, 
+                laptop: 6 
+              }}
+              sx={{
+                paddingRight: "50px"
+              }}
+            >
+              <h1 className={`${classes.nameH1}`}>Hayden Fitzpatrick-Brintle</h1>
+              <h2 className={`${classes.webDevH1}`}>Fullstack Developer</h2>
+              <p className={`${classes.paragraph}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eligendi recusandae! Odit ipsa ab molestiae, dolor et eveniet. Ratione tempore reiciendis ut quos inventore esse voluptatibus. Assumenda quos molestias unde?</p>
+              <Button variant='contained' color='primary' sx={{
+                marginTop: "10px",
+                width: "100%"
+              }}>Let's Connect!</Button>
+            </Grid>
+          </>
+        )}
+        {/* <Grid
           display='flex'
           flexDirection='column'
           alignItems='start'  
@@ -106,7 +152,7 @@ function About() {
             marginTop: "10px",
             width: "100%"
           }}>Let's Connect!</Button>
-        </Grid>
+        </Grid> */}
 
         <Grid
           display='flex'
