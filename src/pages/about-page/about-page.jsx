@@ -26,6 +26,13 @@ import gitLogo from "../../assets/gitLogo.png";
 import muiLogo from "../../assets/muiLogo.png";
 import uziLogo from "../../assets/profilePic.jpg"
 
+// Import Icons
+import { FaPython } from "react-icons/fa";
+
+// Import Components
+import Skills from "../../components/skills-comp/skills-comp";
+import skillsFiles from "../../utils/skill-files.json";
+
 function About() {
 
   // Creating the variable to hold the viewports for the returns 
@@ -320,6 +327,30 @@ function About() {
           </Grid>
 
       </Grid> */}
+
+      <Grid
+        container 
+        direction="row"
+        spacing={2}
+        sx={{
+          justifyContent: "center",
+        }}  
+      >
+        <Grid
+          sx={{
+            backgroundColor: "var(--accent-color)",
+          }}
+          size={{
+            mobile: 12,
+            tablet: 6,
+            laptop: 6
+          }}
+        >
+          {skillsFiles.map(skill => (
+            <Skills skill={skill} />
+          ))}
+        </Grid>
+      </Grid>
     </ThemeProvider>
     </>
   );

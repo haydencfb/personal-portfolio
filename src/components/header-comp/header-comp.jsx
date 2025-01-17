@@ -86,7 +86,7 @@ export default function Header(props) {
           <AppBar 
           position="static"
           sx={{
-            backgroundColor: `var(--grey)`,
+            backgroundColor: `var(--black)`,
             height: `85px`,
             width: `90%`,
             borderRadius: `0px 0px 15px 15px`,

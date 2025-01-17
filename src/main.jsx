@@ -1,8 +1,9 @@
+// Import React Hooks
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+// Import Components
 import App from './App.jsx'
-
 import About from './pages/about-page/about-page.jsx';
 import Portfolio from './pages/dev-portfolio-page/dev-portfolio.jsx';
 import Contact from './pages/contact-page/contact-page.jsx';

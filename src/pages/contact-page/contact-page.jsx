@@ -77,49 +77,6 @@ return (
                 // width: "100%",
             }}
         >
-{/* 
-            {isMobile === true ? (
-                <Grid
-                    display='flex'
-                    flexDirection='column'
-                    alignItems='center'  
-                    justifyContent='center'
-                    size={{ 
-                        mobile: 12
-                    }}
-                    sx={{
-                        color: "var(--accent-color)"
-                    }}
-                >
-                    <h1>
-                        CONTACT
-                    </h1>
-                </Grid>
-            ) : (
-                <Grid
-                    display='flex'
-                    flexDirection='row'
-                    alignItems='start'  
-                    justifyContent='start'
-                    size={{ 
-                        tablet: 1,
-                        laptop: 1
-                    }}
-                    sx={{
-                        color: "var(--accent-color)"
-                    }}
-                >
-                    <h1>
-                        C<br/>
-                        O<br/>
-                        N<br/>
-                        T<br/>
-                        A<br/>
-                        C<br/>
-                        T<br/>
-                    </h1>
-                </Grid>
-            )} */}
 
             <Grid
                 display='flex'

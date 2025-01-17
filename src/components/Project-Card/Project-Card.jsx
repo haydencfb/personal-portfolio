@@ -31,7 +31,7 @@ export default function ProjectCard ({ project }) {
             <Card 
                 sx={{ 
                     width: 500,
-                    backgroundColor: "var(--grey)"
+                    backgroundColor: "var(--black)"
                 }}
             >
                 <CardActionArea>

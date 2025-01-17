@@ -3,26 +3,13 @@
 /* Root CSS */
 :root {
     /* Color Variables */
-    --primary-green: #7E7E5A;
-    --secondary-green: #3E3C2A;
-
-    --primary-brown: #977347;
-    --secondary-brown: #4C3A1A;
-
-    --primary-grey: #C5C7BD;
-    --secondary-grey: #9E9F98;
-
-    --primary-orange: #994930;
-    --secondary-orange: #B88672;
-
     --primary-color: #0D0D0D;
     --accent-color: #C3C3C3;
     --terciary-color: #A3A3A3;
     --quaternary-color: #FFFFFF;
     --pink: #81717A;
     --white: #F2F4F3;
-    /* --grey: #4C5C68; */
-    --grey: #000000;
+    --black: #000000;
 }
 
 /* Global CSS */
@@ -56,7 +43,7 @@ html, body, main, #root {
 }
 
 footer {
-    background-color: var(--grey);
+    background-color: var(--black);
     margin-top: auto;
     width: 100%;
     box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2);

@@ -42,52 +42,57 @@ function Footer() {
             })}>
                 <footer className={`${classes.footer}`}>
 
-                        <Grid container
-                        direction="row"
-                        spacing={2}
-                        aligns="center"
-                        paddingTop='15px'
+                        <Grid 
+                            container
+                            direction="row"
+                            spacing={2}
+                            aligns="center"
+                            paddingTop='15px'
                         >
 
                             <Grid
-                            size={{
-                                mobile: 3,
-                                tablet: 3,
-                                laptop: 3
-                            }}>
+                                size={{
+                                    mobile: 3,
+                                    tablet: 3,
+                                    laptop: 3
+                                }}
+                            >
                                 <Link to="https://github.com/haydencfb" className={`${classes.footerButton}`}>
                                     <GitHubIcon fontSize="large" />
                                 </Link>
                             </Grid>
 
                             <Grid
-                            size={{
-                                mobile: 3,
-                                tablet: 3,
-                                laptop: 3
-                            }}>
+                                size={{
+                                    mobile: 3,
+                                    tablet: 3,
+                                    laptop: 3
+                                }}
+                            >
                                 <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.footerButton}`}>
                                     <LinkedInIcon fontSize="large" />
                                 </Link>
                             </Grid>
 
                             <Grid
-                            size={{
-                                mobile: 3,
-                                tablet: 3,
-                                laptop: 3
-                            }}>
+                                size={{
+                                    mobile: 3,
+                                    tablet: 3,
+                                    laptop: 3
+                                }}
+                            >
                                 <Link to="https://www.youtube.com/@haydencfb" className={`${classes.footerButton}`}>
                                     <YouTubeIcon fontSize="large" />
                                 </Link>
                             </Grid>
 
                             <Grid
-                            size={{
-                                mobile: 3,
-                                tablet: 3,
-                                laptop: 3
-                            }}>
+                                size={{
+                                    mobile: 3,
+                                    tablet: 3,
+                                    laptop: 3
+                                }}
+                            >
                                 <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.footerButton}`}>
                                     <InstagramIcon fontSize="large" />
                                 </Link>

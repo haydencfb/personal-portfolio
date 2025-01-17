@@ -16,7 +16,7 @@
 }
 
 .portfolioCard {
-    background-color: var(--grey);
+    background-color: var(--black);
     display: flex;
     align-items: end;
 }
