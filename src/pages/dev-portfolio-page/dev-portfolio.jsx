@@ -27,14 +27,14 @@ function Portfolio() {
     });
 
     return (
-        <>
+        <div id='projects'>
             {/* Using the themeprovider hook to create breakpoints */}
             <ThemeProvider
                 theme={createTheme({
                     breakpoints: {
                         values: {
                         mobile: 0,
-                        tablet: 426,
+                        tablet: 436,
                         laptop: 768
                         }
                     }
@@ -118,7 +118,7 @@ function Portfolio() {
                     </Grid>
                 </Grid>
             </ThemeProvider>
-        </>
+        </div>
     )
 }
 

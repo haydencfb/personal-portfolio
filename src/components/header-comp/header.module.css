@@ -19,20 +19,40 @@
 }
 
 .headerLink {
-    color: var(--terciary-color);
+    /* color: var(--terciary-color); */
+    color: var(--primary-color);
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.headerLinkDesktop {
+    /* color: var(--terciary-color); */
+    color: var(--quaternary-color);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
     letter-spacing: 5px;
 }
 
 .headerLink:hover {
+    color: var(--terciary-color);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.headerLinkDesktop:hover {
     color: var(--quaternary-color);
+    font-size: 25px;
     text-decoration: none;
 }
 
 .headerLinkActive {
-    color: var(--quaternary-color);
+    color: var(--terciary-color);
+    font-size: 25px;
     text-decoration: none;
     padding: 10px;
     font-weight: bold;

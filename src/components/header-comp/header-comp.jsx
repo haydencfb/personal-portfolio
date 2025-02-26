@@ -31,7 +31,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 // Header Function
 export default function Header(props) {
@@ -87,7 +86,7 @@ export default function Header(props) {
           position="static"
           sx={{
             backgroundColor: `var(--black)`,
-            height: `85px`,
+            height: `100px`,
             width: `90%`,
             borderRadius: `0px 0px 15px 15px`,
           }}>
@@ -106,8 +105,12 @@ export default function Header(props) {
                 <Grid
                   display='flex'
                   alignItems='center'  
+                  justifyContent='start'
                   size={{ 
-                    mobile: 3,
+                    mobile: 12,
+                  }}
+                  sx={{
+                    height: '100px'
                   }}
                 >
                   <Tooltip title="Open Menu">
@@ -135,42 +138,43 @@ export default function Header(props) {
                     }}
                   >
 
-                    <MenuItem sx={{justifyContent: "center"}}>
-                      HFB+
-                    </MenuItem>
-
-                    <Divider />
-
                     <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      <a 
+                        href="#about" 
+                        className={classes.headerLink}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
                         ABOUT
-                      </NavLink>
+                      </a>
                     </MenuItem>
 
                     <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/Portfolio" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      <a 
+                        href="#projects" 
+                        className={classes.headerLink}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
-                        Portfolio
-                      </NavLink>
+                        PROJECTS
+                      </a>
                     </MenuItem>
 
                     <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/Contact" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      <a 
+                        href="#connect" 
+                        className={classes.headerLink}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
-                        Contact
-                      </NavLink>
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/RESUME" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                      >
-                        RESUME
-                      </NavLink>
+                        CONNECT
+                      </a>
                     </MenuItem>
 
                     <Divider />
@@ -211,17 +215,22 @@ export default function Header(props) {
                   justifyContent='center'
                   alignItems='center'
                   size={{
-                    laptop: 3
+                    laptop: 4
                   }}
                   sx={{
                     padding: `25px`,
                   }}
                 >
-                    <NavLink to="/" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                      >
-                      ABOUT
-                    </NavLink>
+                  <a 
+                    href="#about" 
+                    className={classes.headerLinkDesktop}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    ABOUT
+                  </a>
                 </Grid>
 
                 <Grid
@@ -229,17 +238,22 @@ export default function Header(props) {
                   justifyContent='center'
                   alignItems='center'
                   size={{
-                    laptop: 3 
+                    laptop: 4 
                   }}
                   sx={{
                     padding: `25px`
                   }}
                 >
-                    <NavLink to="/Portfolio" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                      >
-                      PROJECTS
-                    </NavLink>
+                  <a 
+                    href="#projects" 
+                    className={classes.headerLinkDesktop}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    PROJECTS
+                  </a>
                 </Grid>
 
                 <Grid
@@ -247,35 +261,22 @@ export default function Header(props) {
                   justifyContent='center'
                   alignItems='center'
                   size={{
-                    laptop: 3
+                    laptop: 4
                   }}
                   sx={{
                     padding: `25px`
                   }}
                 >
-                    <NavLink to="/Contact" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                      >
-                      CONNECT
-                    </NavLink>
-                </Grid>
-
-                <Grid
-                  display='flex'
-                  justifyContent='center'
-                  alignItems='center'
-                  size={{
-                    laptop: 3
-                  }}
-                  sx={{
-                    padding: `25px`
-                  }}
-                >
-                    <NavLink to="/RESUME" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                      >
-                      RESUME
-                    </NavLink>
+                  <a 
+                    href="#connect" 
+                    className={classes.headerLinkDesktop}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    CONNECT
+                  </a>
                 </Grid>
               </>
 
@@ -284,9 +285,13 @@ export default function Header(props) {
               <>                
                 <Grid 
                   display='flex'
-                  alignItems='center'
+                  alignItems='center'  
+                  justifyContent='start'
                   size={{ 
-                    mobile: 3,
+                    mobile: 12,
+                  }}
+                  sx={{
+                    height: '100px'
                   }}
                 >
                   <Tooltip title="Open Menu">
@@ -314,42 +319,43 @@ export default function Header(props) {
                     }}
                   >
 
-                    <MenuItem sx={{justifyContent: "center"}}>
-                      HFB+
-                    </MenuItem>
-
-                    <Divider />
-
-                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+<MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
+                      <a 
+                        href="#about" 
+                        className={classes.headerLink}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
                         ABOUT
-                      </NavLink>
+                      </a>
                     </MenuItem>
 
                     <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/Portfolio" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      <a 
+                        href="#projects" 
+                        className={classes.headerLink}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
-                        Portfolio
-                      </NavLink>
+                        PROJECTS
+                      </a>
                     </MenuItem>
 
                     <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/Contact" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
+                      <a 
+                        href="#connect" 
+                        className={classes.headerLink}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" });
+                        }}
                       >
-                        Contact
-                      </NavLink>
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose} sx={{justifyContent: "center"}}>
-                      <NavLink to="/RESUME" className={({ isActive }) => 
-                      isActive ? `${classes.headerLinkActive}` : `${classes.headerLink}`}
-                      >
-                        RESUME
-                      </NavLink>
+                        CONNECT
+                      </a>
                     </MenuItem>
 
                     <Divider />
@@ -379,21 +385,6 @@ export default function Header(props) {
                     </MenuItem>
 
                   </Menu>
-                </Grid>
-
-                <Grid
-                  display='flex'
-                  justifyContent='end'
-                  alignItems='center'  
-                  size={{ 
-                    tablet: 9, 
-                    laptop: 4 
-                  }}
-                  sx={{
-                    paddingRight: "25px"
-                  }}
-                >
-                  <h2 className={`${classes.headerH2}`}>HAYDEN FITZ-BRINTLE</h2>
                 </Grid>
               </>
 

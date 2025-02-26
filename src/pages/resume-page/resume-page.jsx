@@ -4,16 +4,31 @@ import classes from "../resume-page/resume.module.css";
 // Import MUI Material Hooks
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Grid from '@mui/material/Grid2';
 
 // Import Image Hooks
 import myResume from "../../assets/haydenResume.png";
+import { PDFViewer } from '@react-pdf/renderer';
+import MyDocument from "../../components/resume-pdf-viewer/resume-pdf";
+
+import { Link } from "react-router-dom";
 
 function Resume() {
 
+    const isMobile = useMediaQuery(`(max-width: 435px)`)
+
     const resumePageTheme = createTheme({
+        breakpoints: {
+            values: {
+            mobile: 0,
+            tablet: 426,
+            laptop: 768
+            }
+        },
         palette: {
             primary: {
-                main: "#172A3A",
+                main: "#C3C3C3",
             },
             secondary: {
                 main: "#508991",
@@ -45,24 +60,164 @@ function Resume() {
     }
 
     return (
-        <>
+        <div id='connect'>
             <ThemeProvider theme={resumePageTheme}>
-                <h1 className={`${classes.resumeH1}`}>Resume</h1>
-                
-                <Button variant='contained' color='secondary' onClick={handleDownload}>My Resume</Button>
 
-                <ul className={`${classes.resumeUl}`}>
-                    <li className={`${classes.resumeLi}`}>I am proficient in HTML and CSS webpage development.</li>
-                    <li className={`${classes.resumeLi}`}>I am proficient in JavaScript, using the command line, NodeJS, and NPM to create efficient interactive web pages.</li>
-                    <li className={`${classes.resumeLi}`}>I am proficient in React, combining all of the prior skills in order to create a professional grade webpage that allows the user to interact in many different ways, while maintaining sleek and efficient design to provide the user with a timeless and enjoyable experience.</li>
-                    <li className={`${classes.resumeLi}`}>I am proficient in using multilayed frameworks that allow for web components to operate in unique ways that allow the webpage to provide a unique experience for the user.</li>
-                    <li className={`${classes.resumeLi}`}>As a personal trainer, I have helped clients reach their weight loss goals, setting secular goals along the way to motivate them to stay disciplined and on track with the over all plan.
-                    </li>
-                    <li className={`${classes.resumeLi}`}>I am comfortable working alone on projects, finding efficient ways to complete a task.</li>
-                    <li className={`${classes.resumeLi}`}>When assigned a project, I am comfortable with finding means to get the task done in a timely manner.</li>
-                </ul>
+                <Grid 
+                    container
+                    direction="row"
+                    spacing={2}
+                    aligns="center"
+                    // alignItems="center"
+                    // justifyContent="center"
+                    sx={{
+                        marginTop: "5rem",
+                    }}
+                >
+
+                    {isMobile === true ? (
+                        <>
+                            <Grid
+                                display='flex'
+                                flexDirection='column'
+                                alignItems='center'  
+                                justifyContent='center'
+                                size={{ 
+                                    mobile: 12
+                                }}
+                            >
+                                <h1 className={`${classes.resumeH1}`}>CONNECT</h1>
+                            </Grid>
+                        </>
+                    ) : (
+                        // Conditional rendering for the projects in tablet and laptop view
+                        <>
+                            <Grid
+                                display='flex'
+                                flexDirection='column'
+                                alignItems='center'  
+                                justifyContent='center'
+                                size={{ 
+                                    mobile: 1,
+                                    tablet: 1, 
+                                    laptop: 1 
+                                }}
+                            >
+                                <h1 className={`${classes.resumeH1}`}>
+                                    C<br/>
+                                    O<br/>
+                                    N<br/>
+                                    N<br/>
+                                    E<br/>
+                                    C<br/>
+                                    T</h1>
+                            </Grid>
+                        </>
+                    )}
+
+                            <Grid
+                                display="flex"
+                                flexDirection="row"
+                                alignItems="center"
+                                justifyContent="center"
+                                size={{
+                                    mobile: 12,
+                                    tablet: 10,
+                                    laptop: 10
+                                }}
+                                >
+                                    <PDFViewer className={classes.pdfViewer}>
+                                        <MyDocument />
+                                    </PDFViewer>
+                            </Grid>
+
+
+                            {isMobile === true ? (
+                                <>
+                                    <Grid
+                                        display="flex"
+                                        flexDirection="row"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        size={{
+                                            mobile: 3,
+                                            tablet: 3,
+                                            laptop: 3
+                                        }}
+                                    >
+                                        <h1 className={`${classes.resumeH1}`}>
+                                            <Button component={Link} to="https://github.com/haydencfb">GH</Button></h1>
+                                    </Grid>
+
+                                    <Grid
+                                        display="flex"
+                                        flexDirection="row"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        size={{
+                                            mobile: 3,
+                                            tablet: 3,
+                                            laptop: 3
+                                        }}
+                                    >
+                                        <h1 className={`${classes.resumeH1}`}>
+                                            <Button component={Link} to="https://www.linkedin.com/in/haydencfb/">LI</Button></h1>
+                                    </Grid>
+
+                                    <Grid
+                                        display="flex"
+                                        flexDirection="row"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        size={{
+                                            mobile: 3,
+                                            tablet: 3,
+                                            laptop: 3
+                                        }}
+                                    >
+                                        <h1 className={`${classes.resumeH1}`}>
+                                            <Button component={Link} to="https://www.youtube.com/@haydencfb">YT</Button></h1>
+                                    </Grid>
+
+                                    <Grid
+                                        display="flex"
+                                        flexDirection="row"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                        size={{
+                                            mobile: 3,
+                                            tablet: 3,
+                                            laptop: 3
+                                        }}
+                                    >
+                                        <h1 className={`${classes.resumeH1}`}>
+                                            <Button component={Link} to="https://www.instagram.com/hayden.cfb/">IG</Button></h1>
+                                    </Grid>
+                                </>
+                            ) : (
+                                <Grid
+                                    display="flex"
+                                    flexDirection="row"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    size={{
+                                        mobile: 1,
+                                        tablet: 1,
+                                        laptop: 1
+                                    }}
+                                >
+                                    <h1 className={`${classes.resumeH1}`}>
+                                        <Button component={Link} to="https://github.com/haydencfb">GH</Button><br/>
+                                        <Button component={Link} to="https://www.linkedin.com/in/haydencfb/">LI</Button><br/>
+                                        <Button component={Link} to="https://www.youtube.com/@haydencfb">YT</Button><br/>
+                                        <Button component={Link} to="https://www.instagram.com/hayden.cfb/">IG</Button>
+                                    </h1>
+                                </Grid>
+                            )}
+
+                </Grid>
             </ThemeProvider>
-        </>
+        </div>
     )
 }
 

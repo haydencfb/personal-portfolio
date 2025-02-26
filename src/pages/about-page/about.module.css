@@ -8,8 +8,8 @@
 }
 
 .aboutLogo {
-    max-width: 100%;
-    /* max-width: 500px; */
+    width: 100%;
+    max-width: 550px;
     height: auto;
 }
 
@@ -33,5 +33,4 @@
 .paragraph {
     color: var(--accent-color);
     font-size: 20px;
-    /* margin: 10px; */
 }

@@ -43,8 +43,8 @@ function App() {
                     {/* <Outlet /> */}
                     <About />
                     <Portfolio />
-                    <Contact />
                     <Resume />
+                    {/* <Contact /> */}
                 </main>
             <Footer />
         </>

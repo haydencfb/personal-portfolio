@@ -45,58 +45,10 @@ function Footer() {
                         <Grid 
                             container
                             direction="row"
-                            spacing={2}
                             aligns="center"
-                            paddingTop='15px'
+                            alignItems="center"
+                            justifyContent="center"
                         >
-
-                            <Grid
-                                size={{
-                                    mobile: 3,
-                                    tablet: 3,
-                                    laptop: 3
-                                }}
-                            >
-                                <Link to="https://github.com/haydencfb" className={`${classes.footerButton}`}>
-                                    <GitHubIcon fontSize="large" />
-                                </Link>
-                            </Grid>
-
-                            <Grid
-                                size={{
-                                    mobile: 3,
-                                    tablet: 3,
-                                    laptop: 3
-                                }}
-                            >
-                                <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.footerButton}`}>
-                                    <LinkedInIcon fontSize="large" />
-                                </Link>
-                            </Grid>
-
-                            <Grid
-                                size={{
-                                    mobile: 3,
-                                    tablet: 3,
-                                    laptop: 3
-                                }}
-                            >
-                                <Link to="https://www.youtube.com/@haydencfb" className={`${classes.footerButton}`}>
-                                    <YouTubeIcon fontSize="large" />
-                                </Link>
-                            </Grid>
-
-                            <Grid
-                                size={{
-                                    mobile: 3,
-                                    tablet: 3,
-                                    laptop: 3
-                                }}
-                            >
-                                <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.footerButton}`}>
-                                    <InstagramIcon fontSize="large" />
-                                </Link>
-                            </Grid>
 
                             <Grid
                                 size={{
@@ -106,7 +58,55 @@ function Footer() {
                                 }}
                             >
                                 <p>© 2024 - Hayden Fitzpatrick-Brintle</p>
-                            </Grid>
+                            </Grid> 
+
+                            {/* <Grid
+                                size={{
+                                    mobile: 1,
+                                    tablet: 1,
+                                    laptop: 1
+                                }}
+                            >
+                                <Link to="https://github.com/haydencfb" className={`${classes.footerButton}`}>
+                                    <GitHubIcon fontSize="large" />
+                                </Link>
+                            </Grid> */}
+
+                            {/* <Grid
+                                size={{
+                                    mobile: 1,
+                                    tablet: 1,
+                                    laptop: 1
+                                }}
+                            >
+                                <Link to="https://www.linkedin.com/in/haydencfb/" className={`${classes.footerButton}`}>
+                                    <LinkedInIcon fontSize="large" />
+                                </Link>
+                            </Grid> */}
+
+                            {/* <Grid
+                                size={{
+                                    mobile: 1,
+                                    tablet: 1,
+                                    laptop: 1
+                                }}
+                            >
+                                <Link to="https://www.youtube.com/@haydencfb" className={`${classes.footerButton}`}>
+                                    <YouTubeIcon fontSize="large" />
+                                </Link>
+                            </Grid> */}
+
+                            {/* <Grid
+                                size={{
+                                    mobile: 1,
+                                    tablet: 1,
+                                    laptop: 1
+                                }}
+                            >
+                                <Link to="https://www.instagram.com/hayden.cfb/" className={`${classes.footerButton}`}>
+                                    <InstagramIcon fontSize="large" />
+                                </Link>
+                            </Grid> */}
 
                         </Grid>
                 </footer>

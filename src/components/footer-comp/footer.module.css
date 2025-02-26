@@ -1,6 +1,6 @@
 .footer {
     color: var(--accent-color);
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
 }
 

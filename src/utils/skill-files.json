@@ -1,11 +1,27 @@
 [
     {
+        "skillName": "HTML",
+        "skillImg": "htmlLogo"
+    },
+    {
+        "skillName": "CSS"
+    },
+    {
         "skillName": "JavaScript"
+    },
+    {
+        "skillName": "TypeScript"
     },
     {
         "skillName": "React"
     },
     {
-        "skillName": "CSS"
+        "skillName": "NodeJs"
+    },
+    {
+        "skillName": "MongoDB"
+    },
+    {
+        "skillName": "Postgress SQL"
     }
 ]
