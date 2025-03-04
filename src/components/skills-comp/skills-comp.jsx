@@ -19,7 +19,7 @@ export default function Skills({ skill }) {
                 justifyContent: 'center'
             }}
         >
-            <p className={`${classes.skillName}`}>{skillName}</p>
+            <img src={skills[skillImg]} alt={skillName} className={`${classes.skillImg}`}/>
         </Grid>
     );
 }

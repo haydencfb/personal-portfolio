@@ -56,6 +56,9 @@ function Footer() {
                                     tablet: 12,
                                     laptop: 12
                                 }}
+                                sx={{
+                                    padding: '10px',
+                                }}
                             >
                                 <p>© 2024 - Hayden Fitzpatrick-Brintle</p>
                             </Grid> 

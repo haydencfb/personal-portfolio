@@ -17,14 +17,6 @@ import '@fontsource/roboto/700.css';
   import Button from '@mui/material/Button';
 
 // Import Image Hooks
-import htmlLogo from "../../assets/htmlLogo2.png";
-import cssLogo from "../../assets/cssLogo.png";
-import jsLogo from "../../assets/jsLogo.webp";
-import tsLogo from "../../assets/tsLogo.png";
-import reactLogo from "../../assets/reactLogo.webp";
-import nodejsLogo from "../../assets/nodejsLogo.png";
-import gitLogo from "../../assets/gitLogo.png";
-import muiLogo from "../../assets/muiLogo.png";
 import uziLogo from "../../assets/profilePic.jpg"
 
 // Import Icons
@@ -179,7 +171,7 @@ function About() {
         </Grid>
       </Grid>
 
-        <Grid
+        {/* <Grid
           display='flex'
           flexDirection='row'
           alignItems='center' 
@@ -201,7 +193,7 @@ function About() {
               <Skills skill={skill} />
             ))}
         </Grid>
-      </Grid>
+      </Grid> */}
     </ThemeProvider>
     </div>
   );

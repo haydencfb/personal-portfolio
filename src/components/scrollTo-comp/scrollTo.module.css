@@ -1,0 +1,12 @@
+.scrollButton {
+    position: 'fixed';
+    bottom: '20px';
+    right: '20px';
+    z-index: '100';
+    cursor: 'pointer';
+    padding: '10px';
+    background-color: 'var(--black)';
+    color: 'var(--white)';
+    border: 'none';
+    border-radius: '5px';
+}

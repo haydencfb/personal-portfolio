@@ -20,8 +20,6 @@
 
 .resumeButton {
     color: var(--accent-color);
-    font-weight: bold;
-    background-color: var(--black);
     border-radius: 5px;
     box-shadow: none;
     padding: 10px;
@@ -32,11 +30,12 @@
     /* width: ; */
 }
 
+.pdfViewerMobile {
+    /* width: 50vw; */
+    height: 400px; 
+}
+
 .pdfViewer {
     width: 50vw;
     height: 750px; /* Adjust the height as needed */
-}
-
-.linkButton {
-    
 }

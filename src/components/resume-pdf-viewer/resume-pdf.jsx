@@ -1,6 +1,7 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer';
-import myResume from '../../assets/haydenResume.png';
+import resume1 from '../../assets/resumePage1.png';
+import resume2 from '../../assets/resumePage2.png';
 
 // Create styles
 const styles = StyleSheet.create({
@@ -26,7 +27,11 @@ const MyDocument = () => (
             <View style={styles.section}>
                 <Image 
                     style={styles.image} 
-                    src={myResume}
+                    src={resume1}
+                />
+                <Image 
+                    style={styles.image} 
+                    src={resume2}
                 />
             </View>
         </Page>

@@ -4,24 +4,51 @@
         "skillImg": "htmlLogo"
     },
     {
-        "skillName": "CSS"
+        "skillName": "CSS",
+        "skillImg": "cssLogo"
     },
     {
-        "skillName": "JavaScript"
+        "skillName": "JavaScript",
+        "skillImg": "javascriptLogo"
     },
     {
-        "skillName": "TypeScript"
+        "skillName": "TypeScript",
+        "skillImg": "typescriptLogo"
     },
     {
-        "skillName": "React"
+        "skillName": "NodeJs",
+        "skillImg": "nodejsLogo"
     },
     {
-        "skillName": "NodeJs"
+        "skillName": "Python",
+        "skillImg": "pythonLogo"
     },
     {
-        "skillName": "MongoDB"
+        "skillName": "React",
+        "skillImg": "reactLogo"
     },
     {
-        "skillName": "Postgress SQL"
+        "skillName": "MongoDB",
+        "skillImg": "mongodbLogo"
+    },
+    {
+        "skillName": "SQL",
+        "skillImg": "sqlLogo"
+    },
+    {
+        "skillName": "PostreSQL",
+        "skillImg": "postgresqlLogo"
+    },
+    {
+        "skillName": "MUI",
+        "skillImg": "muiLogo"
+    },
+    {
+        "skillName": "Vite",
+        "skillImg": "viteLogo"
+    },
+    {
+        "skillName": "Git",
+        "skillImg": "gitLogo"
     }
 ]

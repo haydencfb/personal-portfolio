@@ -115,26 +115,48 @@ function Resume() {
                         </>
                     )}
 
-                            <Grid
-                                display="flex"
-                                flexDirection="row"
-                                alignItems="center"
-                                justifyContent="center"
-                                size={{
-                                    mobile: 12,
-                                    tablet: 10,
-                                    laptop: 10
-                                }}
-                                >
-                                    <PDFViewer className={classes.pdfViewer}>
-                                        <MyDocument />
-                                    </PDFViewer>
-                            </Grid>
+                        {isMobile === true ? (
+                            <>
+                                <Grid
+                                    display="flex"
+                                    flexDirection="row"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    size={{
+                                        mobile: 12,
+                                        tablet: 10,
+                                        laptop: 10
+                                    }}
+                                    >
+                                        <PDFViewer className={classes.pdfViewerMobile}>
+                                            <MyDocument />
+                                        </PDFViewer>
+                                </Grid>
+                            </>
+                            ) : (
+                            <>
+                                <Grid
+                                    display="flex"
+                                    flexDirection="row"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    size={{
+                                        mobile: 12,
+                                        tablet: 10,
+                                        laptop: 10
+                                    }}
+                                    >
+                                        <PDFViewer className={classes.pdfViewer}>
+                                            <MyDocument />
+                                        </PDFViewer>
+                                </Grid>
+                            </>
+                        )}
 
 
                             {isMobile === true ? (
                                 <>
-                                    <Grid
+                                    {/* <Grid
                                         display="flex"
                                         flexDirection="row"
                                         alignItems="center"
@@ -192,7 +214,7 @@ function Resume() {
                                     >
                                         <h1 className={`${classes.resumeH1}`}>
                                             <Button component={Link} to="https://www.instagram.com/hayden.cfb/">IG</Button></h1>
-                                    </Grid>
+                                    </Grid> */}
                                 </>
                             ) : (
                                 <Grid
@@ -206,7 +228,7 @@ function Resume() {
                                         laptop: 1
                                     }}
                                 >
-                                    <h1 className={`${classes.resumeH1}`}>
+                                    <h1 className={`${classes.resumeButton}`}>
                                         <Button component={Link} to="https://github.com/haydencfb">GH</Button><br/>
                                         <Button component={Link} to="https://www.linkedin.com/in/haydencfb/">LI</Button><br/>
                                         <Button component={Link} to="https://www.youtube.com/@haydencfb">YT</Button><br/>

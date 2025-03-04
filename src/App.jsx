@@ -12,6 +12,7 @@ import About from './pages/about-page/about-page.jsx';
 import Portfolio from './pages/dev-portfolio-page/dev-portfolio.jsx';
 import Contact from './pages/contact-page/contact-page.jsx';
 import Resume from './pages/resume-page/resume-page.jsx';
+import ScrollToTopButton from './components/scrollTo-comp/scrollTo.jsx';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
                     <About />
                     <Portfolio />
                     <Resume />
+                    <ScrollToTopButton />
                     {/* <Contact /> */}
                 </main>
             <Footer />
